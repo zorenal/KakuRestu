@@ -6,8 +6,14 @@ import Image from 'next/image';
 export default function Menu() {
     const [selectedMenu, setSelectedMenu] = useState('lunch'); // Default to lunch menu
 
+    interface MenuItem {
+        name: string;
+        price: number;
+        ingredients: string;
+        image?: string; // Image is optional
+    }
     // Define menu items with ingredients
-    const menuItems = {
+    const menuItems: { [key: string]: MenuItem[] } = {
         lunch: [
             { name: 'Sushi Gyro Wrap', price: 12, ingredients: 'Sushi rice, Gyro meat, Tzatziki sauce, Lettuce, Tomato, Onion', image: '/g1.jpg' },
             { name: 'Greek Ramen Salad', price: 10, ingredients: 'Ramen noodles, Feta cheese, Kalamata olives, Cucumber, Red onion, Greek dressing', image: '/g2.jpg' },
@@ -62,7 +68,7 @@ export default function Menu() {
 
     return (
         <div id="Menu" className="flex flex-col items-center min-h-screen">
-            <h1 className="text-3xl font-bold mb-8">Menu</h1>
+            <h1 className="text-3xl font-bold mb-8">Restaurant Menu</h1>
         
             <div className="max-w-6xl w-full bg-white shadow-md rounded-lg overflow-hidden">
         
@@ -78,7 +84,7 @@ export default function Menu() {
 
                 <div className="overflow-y-auto h-full">
                 <div className="grid grid-cols-2 gap-4 p-4">
-                    {menuItems[selectedMenu].map((menuItem, index) => (
+                    {menuItems[selectedMenu].map((menuItem: any, index: number) => (
                         <div key={index} className="bg-gray-200 p-4 rounded-lg flex items-center">
                             <div className="w-64 h-32 flex-shrink-0 relative">
                                 <Image
