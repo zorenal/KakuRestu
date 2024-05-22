@@ -12,13 +12,14 @@ export default function Menu() {
         ingredients: string;
         image?: string; // Image is optional
     }
+
     // Define menu items with ingredients
     const menuItems: { [key: string]: MenuItem[] } = {
         lunch: [
-            { name: 'Sushi Gyro Wrap', price: 12, ingredients: 'Sushi rice, Gyro meat, Tzatziki sauce, Lettuce, Tomato, Onion', image: '/g1.jpg' },
-            { name: 'Greek Ramen Salad', price: 10, ingredients: 'Ramen noodles, Feta cheese, Kalamata olives, Cucumber, Red onion, Greek dressing', image: '/g2.jpg' },
-            { name: 'Persian Souvlaki Bowl', price: 11, ingredients: 'Grilled chicken, Basmati rice, Tzatziki sauce, Hummus, Tabouleh', image: '/g3.jpg' },
-            { name: 'Tempura Spanakopita', price: 14, ingredients: 'Spinach, Feta cheese, Tempura batter, Dill yogurt sauce', image: '/g5.jpg' },
+            { name: 'Sushi Gyro Wrap', price: 12, ingredients: 'Sushi rice, Gyro meat, Tzatziki sauce, Lettuce, Tomato, Onion' },
+            { name: 'Greek Ramen Salad', price: 10, ingredients: 'Ramen noodles, Feta cheese, Kalamata olives, Cucumber, Red onion, Greek dressing', },
+            { name: 'Persian Souvlaki Bowl', price: 11, ingredients: 'Grilled chicken, Basmati rice, Tzatziki sauce, Hummus, Tabouleh',},
+            { name: 'Tempura Spanakopita', price: 14, ingredients: 'Spinach, Feta cheese, Tempura batter, Dill yogurt sauce'},
             { name: 'Miso Tzatziki Flatbread', price: 13, ingredients: 'Flatbread, Miso sauce, Tzatziki sauce, Cucumber, Red onion' },
             { name: 'Falafel Sushi Roll', price: 11, ingredients: 'Sushi rice, Falafel, Hummus, Cucumber, Tomato, Tahini sauce' },
             { name: 'Greek Bento Box', price: 15, ingredients: 'Dolma, Spanakopita, Greek salad, Tzatziki sauce' },
@@ -75,38 +76,30 @@ export default function Menu() {
                 {/* Menu Selection Buttons */}
                 <div className="flex justify-around mb-4">
                     {Object.keys(menuItems).map((category) => (
-                        <button key={category} onClick={() => setSelectedMenu(category)} className={`menu-btn ${selectedMenu === category && 'active'} px-4 py-2`}>
+                        <button
+                            key={category}
+                            onClick={() => setSelectedMenu(category)}
+                            className={`menu-btn px-4 py-2 rounded ${selectedMenu === category ? 'bg-gray-300' : 'bg-white'}`}
+                        >
                             {category.charAt(0).toUpperCase() + category.slice(1)}
                         </button>
                     ))}
                 </div>
 
-
                 <div className="overflow-y-auto h-full">
-                <div className="grid grid-cols-2 gap-4 p-4">
-                    {menuItems[selectedMenu].map((menuItem: any, index: number) => (
-                        <div key={index} className="bg-gray-200 p-4 rounded-lg flex items-center">
-                            <div className="w-64 h-32 flex-shrink-0 relative">
-                                <Image
-                                    src={menuItem.image}
-                                    alt={menuItem.name}
-                                    layout="fill"
-                                    objectFit="cover"
-                                    className="rounded"
-                                />
+                    <div className="grid grid-cols-2 gap-4 p-4">
+                        {menuItems[selectedMenu].map((menuItem: any, index: number) => (
+                            <div key={index} className="bg-gray-200 p-4 rounded-lg flex items-center">
+                                <div className="ml-4">
+                                    <h2 className="text-lg font-semibold mb-2">{menuItem.name}, {menuItem.price}</h2>
+                                    <p className="text-xs">{menuItem.ingredients}</p>
+                                </div>
                             </div>
-                            <div className="ml-4">
-                                <h2 className="text-lg font-semibold mb-2">{menuItem.name}, {menuItem.price}</h2>
-                                <p className="text-xs">{menuItem.ingredients}</p>
-                            </div>
-                        </div>
-                    ))}
+                        ))}
+                    </div>
                 </div>
-            </div>
-
         
             </div>
         </div>
     );
-    
 }

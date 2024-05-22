@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function HrsnLoc() {
   return (
     <div id="Hours&Location" className="flex flex-row h-screen justify-center m-5">
-      <div className="flex flex-col justify-center items-center w-1/2 p-8 border border-dotted border-black mr-5">
+      <div className="flex flex-col justify-center items-center w-1/2 p-8 border border-dotted border-black mr-5 sm:w-full sm:text-center">
         <p className="text-3xl font-bold mb-8">Visit Us</p>
         <a
           href="https://www.google.com/maps/search/?api=1&query=2788+San+Tomas+Expy,+Santa+Clara,+CA+95051"
@@ -31,12 +31,13 @@ export default function HrsnLoc() {
         </div>
 
         <p className="mt-3 font-semibold">Happy Hour</p>
-        <p>Monday - Friday // 3pm - 6pm</p>
+        <p>Monday - Friday</p>
+        <p>3pm - 6pm</p>
         <button className="mt-6 px-6 py-3 bg-red-600 text-white text-lg font-bold rounded">
           Reserve A Table
         </button>
       </div>
-      <div className="w-1/2">
+      <div className="w-1/2 sm:w-full">
         <div className="flex items-center justify-center h-full">
           <img
             src="/restaurantstock.jpg"
