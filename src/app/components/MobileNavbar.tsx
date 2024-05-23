@@ -64,7 +64,7 @@ export default function MobileNavbar({ sections }:  { sections: Section[] }) {
                     </div>
                 </div>
             </div>
-            {isOpen && (
+            {isOpen a && (
                 <div className="sm:hidden bg-black bg-opacity-90">
                     <div className="px-2 pt-2 pb-3 space-y-1">
                     {sections.map((section: Section, index: number) => (
