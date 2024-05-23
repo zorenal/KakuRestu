@@ -66,6 +66,21 @@ export default function HrsnLoc() {
 
   return (
     <section id="Hours&Location" className="flex flex-col sm:flex-row sm:h-screen justify-center m-5">
+     
+{/* Mobile view */}
+<div className="sm:hidden sm:flex sm:items-center sm:justify-center mb-2">
+  {locations.map((location, index) => (
+    <img
+      key={index}
+      src={`${location.image}`}
+      alt="Location Image"
+      className={`w-full object-cover ${selectedLocation === index ? 'block' : 'hidden'} sm:h-full md:h-auto lg:h-auto xl:h-auto`}
+      style={{ height: "200px" }} // Adjust the height here as needed
+    />
+  ))}
+</div>
+     
+     
       {/* Information section */}
       <div className="flex items-center sm:items-start border border-dotted border-black w-full sm:w-1/2 overflow-hidden">
         <div className="flex flex-col items-center w-full">
@@ -118,7 +133,7 @@ export default function HrsnLoc() {
       </div>
 
       {/* Desktop view */}
-      <div className="hidden sm:flex sm:w-1/2 sm:items-center sm:justify-center">
+      <div className="hidden sm:flex sm:w-1/2 sm:items-center sm:justify-center ml-2">
         {locations.map((location, index) => (
           <img
             key={index}
