@@ -86,13 +86,13 @@ export default function Menu() {
     };
 
     return (
-        <div id="Menu" className="flex flex-col items-center min-h-screen">
+        <div id="Menu" className="flex flex-col items-center min-h-screen p-4">
             <h1 className="text-3xl font-bold mb-8">Menu</h1>
         
             <div className="max-w-6xl w-full bg-white shadow-md rounded-lg overflow-hidden">
         
                 {/* Menu Selection Buttons */}
-                <div className="flex justify-around mb-4">
+                <div className="flex flex-wrap justify-around mb-4">
                     {Object.keys(menuItems).map((category) => (
                         <button
                             key={category}
@@ -110,9 +110,9 @@ export default function Menu() {
                             <div key={subcategory} className="mb-6">
                                 <h2 className="text-xl font-semibold mb-4 underline">{subcategory}</h2>
                                 {menuItems[selectedMenu][subcategory].map((menuItem: MenuItem, index: number) => (
-                                    <div key={index} className=" p-3 flex items-center mb-2 border-b">
-                                        <div className="ml-4">
-                                            <h3 className="text-lg font-semibold mb-2">{menuItem.name} ~ {menuItem.price}</h3>
+                                    <div key={index} className="p-3 flex flex-col md:flex-row items-start md:items-center mb-2 border-b">
+                                        <div className="md:ml-4">
+                                            <h3 className="text-lg font-semibold mb-2">{menuItem.name} ~ ${menuItem.price}</h3>
                                             <p className="text-xs">{menuItem.ingredients}</p>
                                         </div>
                                     </div>

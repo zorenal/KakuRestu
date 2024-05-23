@@ -37,7 +37,7 @@ export default function Navbar() {
             </div>
             <div className="container mx-auto flex justify-between items-center">
                 <div className="flex-shrink-0 hidden md:block">
-                    <Link href="/" className="text-lg font-semibold ">
+                    <Link href="/" className="text-lg font-semibold text-white">
                         JPG Restaurant
                     </Link>
                 </div>
@@ -45,7 +45,7 @@ export default function Navbar() {
                     <ul className="flex space-x-6">
                         {sections.map((link, index) => (
                             <li
-                                className={link.label === 'RESERVATION' ? 'bg-red-500 rounded-md px-3 text-white hover:bg-red-600' : 'hover:bg-black hover:text-white rounded-md px-3'}
+                                className={link.label === 'RESERVATION' ? 'bg-red-500 rounded-md px-3 text-white hover:bg-red-600' : 'hover:bg-black text-white rounded-md px-3'}
                                 key={index}
                             >
                                 <Link href={link.href}>
