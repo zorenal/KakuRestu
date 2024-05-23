@@ -97,7 +97,7 @@ export default function Menu() {
                         <button
                             key={category}
                             onClick={() => setSelectedMenu(category)}
-                            className={`menu-btn px-4 py-2 border ${selectedMenu === category ? 'bg-gray-300' : 'bg-white'}`}
+                            className={`menu-btn px-4 py-2 border rounded-lg ${selectedMenu === category ? 'bg-gray-300' : 'bg-white'}`}
                         >
                             {category.charAt(0).toUpperCase() + category.slice(1)}
                         </button>
