@@ -1,7 +1,7 @@
 'use client'
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import MobileNavBar from "./MobileNavbar";
+import MobileNavbar from "./MobileNavbar";
 
 export default function Navbar() {
     const [scrolled, setScrolled] = useState(false);
@@ -31,21 +31,19 @@ export default function Navbar() {
     ];
 
     return (
-        <nav className={`navbar-container fixed top-0 w-full z-50 transition-all duration-300 ${scrolled ? 'bg-black shadow-md py-2' : 'py-4 text-white '}`}>
-            <div className="md:hidden lg:hidden">
-                <MobileNavBar sections={sections} />
-            </div>
-            <div className="container mx-auto flex justify-between items-center">
-                <div className="flex-shrink-0 hidden md:block">
-                    <Link href="/" className="text-lg font-semibold text-white">
-                        JPG Restaurant
+        <nav className={`fixed top-0 w-full z-50 pt-5 ${scrolled ? 'bg-white shadow-md text-black' : 'bg-transparent'} transition-all duration-500 ${scrolled && 'lg:py-10 lg:text-black'}`}>
+            <div className="container mx-auto flex justify-between items-center px-4">
+        
+            <div className="hidden sm:flex sm:items-center">
+                    <Link href="/" className={`text-lg font-semibold ${scrolled ? 'text-black transition-all duration-500' : 'text-white'}`}>
+                        JPG 
                     </Link>
                 </div>
                 <div className="hidden md:flex md:items-center">
                     <ul className="flex space-x-6">
                         {sections.map((link, index) => (
                             <li
-                                className={link.label === 'RESERVATION' ? 'bg-red-500 rounded-md px-3 text-white hover:bg-red-600' : 'hover:bg-black text-white rounded-md px-3'}
+                                className={`font-semibold ${link.label === 'RESERVATION' ? 'bg-red-500 px-3 text-white hover:bg-red-600' : 'px-3'} ${scrolled ? 'text-black transition-all duration-500' : 'text-white'}`}
                                 key={index}
                             >
                                 <Link href={link.href}>
@@ -56,6 +54,11 @@ export default function Navbar() {
                     </ul>
                 </div>
             </div>
+
+            <div className="md:hidden lg:hidden">
+                <MobileNavbar sections={sections} />
+            </div>
+
         </nav>
     );
 }
