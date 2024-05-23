@@ -1,6 +1,7 @@
 'use client'
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import MobileNavBar from "./MobileNavbar";
 
 export default function Navbar() {
     const [scrolled, setScrolled] = useState(false);
@@ -30,11 +31,14 @@ export default function Navbar() {
     ];
 
     return (
-        <nav className={`navbar-container fixed top-0 w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white shadow-md py-2' : 'py-4 text-white '}`}>
+        <nav className={`navbar-container fixed top-0 w-full z-50 transition-all duration-300 ${scrolled ? 'bg-black shadow-md py-2' : 'py-4 text-white '}`}>
+            <div className="md:hidden lg:hidden">
+                <MobileNavBar sections={sections} />
+            </div>
             <div className="container mx-auto flex justify-between items-center">
-                <div className="flex-shrink-0">
-                    <Link href="/" className="text-lg font-semibold">
-                     JPG Restaurant
+                <div className="flex-shrink-0 hidden md:block">
+                    <Link href="/" className="text-lg font-semibold ">
+                        JPG Restaurant
                     </Link>
                 </div>
                 <div className="hidden md:flex md:items-center">
