@@ -18,12 +18,12 @@ export default function Contact() {
   
     return (
         <div id="Contact" className="flex flex-col justify-center items-center h-5/6 bg-black text-white p-10">
-        <div>Contact Us</div>
-        <div>For job opportunities, please send your resume to JPGRestaurant@gmail.com</div>
+        <div className="mb-2">Contact Us</div>
+        <div className="mb-2">For job opportunities, please send your resume to JPGRestaurant@gmail.com</div>
         <div>For all other inquiries, send us a message via the form below and we’ll get back to you as soon as possible.</div>
         
         {/* <form onSubmit={handleSubmit(onSubmit)} className='mt-5 w-1/2'> */}
-        <form  className='mt-5 w-1/2'>
+        <form  className='mt-5 w-full md:w-1/2'>
          <div className='mb-5'>
         <label
           htmlFor='name'

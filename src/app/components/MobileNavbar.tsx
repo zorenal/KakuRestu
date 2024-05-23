@@ -36,14 +36,14 @@ export default function MobileNavbar({ sections }:  { sections: Section[] }) {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between h-16">
                     <div className="flex-shrink-0 flex items-center">
-                    <Link href='/' className={`text-2xl font-bold ${scrolled ? 'text-white' : 'text-black'} ${isOpen ? "text-black" : "text-white"}`}>JPG</Link>
+                    <Link href='/' className={`text-2xl font-bold ${scrolled ? 'text-white' : 'text-black'} ${isOpen ? 'text-white' : 'text-white'}`}>JPG</Link>
                     </div>
                     <div className="flex items-center sm:hidden">
                         <button
                             onClick={toggleMenu}
                             className="text-white focus:outline-none"
                         >
-                            <svg className={`h-10 w-10 ${scrolled ? `text-white` : `text-black`} ${isOpen ? "text-black" : "text-white"}`} stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                            <svg className={`h-10 w-10 ${scrolled ? `text-white` : `text-black`} ${isOpen ? 'text-white' : 'text-white'}`} stroke="currentColor" fill="none" viewBox="0 0 24 24">
                                 {isOpen ? (
                                     <path
                                         strokeLinecap="round"
