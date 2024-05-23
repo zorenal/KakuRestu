@@ -36,7 +36,9 @@ export default function Navbar() {
         
             <div className="hidden sm:flex sm:items-center">
                     <Link href="/" className={`text-lg font-semibold ${scrolled ? 'text-black transition-all duration-500' : 'text-white'}`}>
-                        JPG 
+                         {/* Logo */}
+                    <img src="/logo.png" alt="Logo" className="h-10 w-10 mr-2" />
+             
                     </Link>
                 </div>
                 <div className="hidden md:flex md:items-center">

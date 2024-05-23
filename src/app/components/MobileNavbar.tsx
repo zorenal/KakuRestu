@@ -24,11 +24,13 @@ const MobileNavbar: React.FC<MobileNavbarProps> = ({ sections }) => {
     return (
         <div className="fixed top-0 right-0 w-full bg-white z-50 p-8 overflow-hidden h-auto ">
             <div className="flex items-center justify-between">
-                {/* Logo */}
-                <div className="flex items-center">
-                    <img src="/your-logo.png" alt="Logo" className="h-10 w-10 mr-2" />
-                </div>
-
+              
+                <Link href="/" className="flex items-center">
+                         {/* Logo */}
+                    <img src="/logo.png" alt="Logo" className="h-10 w-10 mr-2" />
+             
+                    </Link>
+                    
                 {/* Menu toggle button */}
                 <button
                     onClick={toggleMenu}

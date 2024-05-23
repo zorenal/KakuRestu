@@ -75,7 +75,6 @@ export default function HrsnLoc() {
       src={`${location.image}`}
       alt="Location Image"
       className={`w-full object-cover ${selectedLocation === index ? 'block' : 'hidden'} sm:h-full md:h-auto lg:h-auto xl:h-auto`}
-      style={{ height: "200px" }} // Adjust the height here as needed
     />
   ))}
 </div>
