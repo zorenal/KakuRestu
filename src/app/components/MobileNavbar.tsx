@@ -30,11 +30,10 @@ const MobileNavbar: React.FC<MobileNavbarProps> = ({ sections }) => {
                     <img src="/logo.png" alt="Logo" className="h-10 w-10 mr-2" />
              
                     </Link>
-                    
                 {/* Menu toggle button */}
                 <button
                     onClick={toggleMenu}
-                    className="absolute top-10 right-10 md:hidden focus:outline-none"
+                    className="absolute top-8 right-8 md:hidden focus:outline-none"
                 >
                     <svg
                         className="h-8 w-8 text-black"
@@ -60,11 +59,11 @@ const MobileNavbar: React.FC<MobileNavbarProps> = ({ sections }) => {
                     </svg>
                 </button>
             </div>
-            <ul className={`flex flex-col space-y-4 ${isOpen ? 'block' : 'hidden'}`}>
+            <ul className={`flex flex-col space-y-4 mt-5 ${isOpen ? 'block' : 'hidden'}`}>
                 {sections.map((link, index) => (
                     <li
                         key={index}
-                        className="font-semibold text-black"
+                        className={`font-semibold ${link.label === 'RESERVATION' ? 'bg-red-500 px-3 text-white hover:bg-red-600' : 'px-3'}`}
                     >
                         <Link href={link.href} className="block" onClick={handleSectionClick}>
                             {link.label}
