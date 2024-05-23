@@ -3,7 +3,12 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 
-export default function MobileNavbar({ sections }) {
+interface Section {
+    href: string;
+    label: string;
+}
+
+export default function MobileNavbar({ sections }:  { sections: Section[] }) {
     const [isOpen, setIsOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
 
@@ -62,16 +67,17 @@ export default function MobileNavbar({ sections }) {
             {isOpen && (
                 <div className="sm:hidden bg-black bg-opacity-90">
                     <div className="px-2 pt-2 pb-3 space-y-1">
-                        {sections.map((link, index) => (
-                            <ul
-                                className={link.label === 'RESERVATION' ? 'bg-red-500 rounded-md px-3 text-white hover:bg-red-600' : 'text-white hover:bg-gray-700 rounded-md px-3'}
-                                key={index}
-                            >
-                                <Link href={link.href}>
-                                    {link.label}
-                                </Link>
-                            </ul>
-                        ))}
+                    {sections.map((section: Section, index: number) => (
+    <ul
+        className={section.label === 'RESERVATION' ? 'bg-red-500 rounded-md px-3 text-white hover:bg-red-600' : 'text-white hover:bg-gray-700 rounded-md px-3'}
+        key={index}
+    >
+        <Link href={section.href}>
+            {section.label}
+        </Link>
+    </ul>
+))}
+
                     </div>
                 </div>
             )}
