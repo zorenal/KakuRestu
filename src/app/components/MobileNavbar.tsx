@@ -17,6 +17,10 @@ const MobileNavbar: React.FC<MobileNavbarProps> = ({ sections }) => {
         setIsOpen(!isOpen);
     };
 
+    const handleSectionClick = () => {
+        setIsOpen(false); // Close the menu when a section is clicked
+    };
+
     return (
         <div className="fixed top-0 right-0 w-full bg-white z-50 p-8 overflow-hidden h-auto ">
             <div className="flex items-center justify-between">
@@ -60,7 +64,7 @@ const MobileNavbar: React.FC<MobileNavbarProps> = ({ sections }) => {
                         key={index}
                         className="font-semibold text-black"
                     >
-                        <Link href={link.href} className="block">
+                        <Link href={link.href} className="block" onClick={handleSectionClick}>
                             {link.label}
                         </Link>
                     </li>
