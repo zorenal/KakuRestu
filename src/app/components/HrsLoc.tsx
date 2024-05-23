@@ -60,7 +60,7 @@ export default function HrsnLoc() {
     },
   ];
 
-  const handleLocationClick = (index) => {
+  const handleLocationClick = (index: any) => {
     setSelectedLocation(index === selectedLocation ? null : index);
   };
 
