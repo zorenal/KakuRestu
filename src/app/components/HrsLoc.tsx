@@ -100,7 +100,7 @@ export default function HrsnLoc() {
           {selectedLocation !== null && (
             <div className="flex flex-col items-center w-full m-8">
               <p className="text-xl font-bold mb-3">{locations[selectedLocation].name}</p>
-              <p className="mb-3 underline">
+              <p className="mb-3 underline text-center">
                 <a href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(locations[selectedLocation].address)}`} target="_blank" rel="noopener noreferrer">
                   {locations[selectedLocation].address}
                 </a>
