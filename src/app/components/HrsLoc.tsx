@@ -1,7 +1,6 @@
 "use client";
 import { useState } from 'react';
 import Link from 'next/link';
-
 export default function HrsnLoc() {
   const [selectedLocation, setSelectedLocation] = useState(null);
 
@@ -66,82 +65,73 @@ export default function HrsnLoc() {
 
   return (
     <section id="Hours&Location" className="flex flex-col sm:flex-row sm:h-screen justify-center m-5">
-     
-{/* Mobile view */}
-<div className="sm:hidden sm:flex sm:items-center sm:justify-center mb-2">
-  {locations.map((location, index) => (
-    <img
-      key={index}
-      src={`${location.image}`}
-      alt="Location Image"
-      className={`w-full object-cover ${selectedLocation === index ? 'block' : 'hidden'} sm:h-full md:h-auto lg:h-auto xl:h-auto`}
-    />
-  ))}
-</div>
-     
-     
-      {/* Information section */}
-      <div className="flex items-center sm:items-start border border-dotted border-black w-full sm:w-1/2 overflow-hidden">
+    {/* Information section */}
+    <div className="flex items-center sm:items-start border border-dotted border-black w-full sm:w-1/2 overflow-hidden">
+      <div className="flex flex-col items-center w-full">
+        <p className="text-2xl sm:text-3xl font-bold mb-5 mt-5">Visit Us</p>
         <div className="flex flex-col items-center w-full">
-          <p className="text-base sm:text-xl font-bold mb-3 mt-5 text-center">Visit Us</p>
-          <div className="w-full">
-            {locations.map((location, index) => (
-              <button
-                key={index}
-                onClick={() => handleLocationClick(index)}
-                className={`w-full mb-3 border rounded-lg p-2 ${selectedLocation === index ? 'bg-black bg-opacity-10 font-bold' : ''}`}
-              >
-                <span className="text-xs sm:text-base text-center">{location.name}</span>
-              </button>
-            ))}
-          </div>
           {locations.map((location, index) => (
-            <div
+            <button
               key={index}
-              className={`flex justify-center transition-all duration-500 ease-in-out overflow-hidden ${selectedLocation === index ? 'block max-h-screen opacity-100' : 'hidden max-h-0 opacity-0'}`}
-            > 
-              <div className="flex flex-col items-center w-full m-4">
-                <p className="text-base sm:text-xl font-bold mb-2 text-center">{location.name}</p>
-                <p className="text-xs sm:text-base mb-2 text-center">
-                  <Link href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(location.address)}`} target="_blank" rel="noopener noreferrer">
-                    {location.address}
-                  </Link>
-                </p>
-                <p className="text-xs sm:text-base mb-2 text-center">
-                  <Link href={`tel:${location.phone}`} className="underline">
-                    {location.phone}
-                  </Link>
-                </p>
-                <div className="mb-4 text-center">
-                  {Object.entries(location.hours).map(([day, hours]) => (
-                    <div key={day} className="text-xs sm:text-base mb-1">
-                      <p className="font-bold">{day}</p>
-                      <p>{hours}</p>
-                    </div>
-                  ))}
-                </div>
-                <p className="font-bold text-center">Happy Hour</p>
-                <p className="text-xs sm:text-base text-center">{location.happyHour}</p>
-                <button className="mt-4 px-6 py-3 bg-red-600 text-white text-lg font-bold rounded">
-                  Reserve A Table
-                </button>
-              </div>
-            </div>
+              onClick={() => handleLocationClick(index)}
+              className={`w-auto mb-3 border rounded-lg p-2 ${selectedLocation === index ? 'bg-black bg-opacity-10 font-bold' : ''}`}
+            >
+              <span className="text-sm sm:text-base">{location.name}</span>
+            </button>
           ))}
         </div>
-      </div>
-
-      {/* Desktop view */}
-      <div className="hidden sm:flex sm:w-1/2 sm:items-center sm:justify-center ml-2">
         {locations.map((location, index) => (
-          <img
+          <div
             key={index}
-            src={`${location.image}`}
-            alt="Location Image"
-            className={`w-full object-cover h-full ${selectedLocation === index ? 'block' : 'hidden'}`}
-          />
+            className={`flex transition-all duration-1000 ease-in-out  ${selectedLocation === index ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'}`}
+          > 
+            <div className="flex flex-col items-center w-full m-8">
+              <p className="text-lg sm:text-xl font-bold mb-3">{location.name}</p>
+              <p className="text-sm sm:text-base mb-3 underline text-center">
+                <Link href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(location.address)}`} target="_blank" rel="noopener noreferrer">
+                  {location.address}
+                </Link>
+              </p>
+              <p className="text-sm sm:text-base mb-3">
+                <Link href={`tel:${location.phone}`} className="underline">
+                  {location.phone}
+                </Link>
+              </p>
+              <div className="mb-8 text-center">
+                {Object.entries(location.hours).map(([day, hours]) => (
+                  <div key={day} className="text-sm sm:text-base mb-2">
+                    <p className="font-bold">{day}</p>
+                    <p>{hours}</p>
+                  </div>
+                ))}
+              </div>
+              <p className="font-bold text-center">Happy Hour</p>
+              <p className="text-sm sm:text-base">{location.happyHour}</p>
+              <button className="mt-8 px-6 py-3 bg-red-600 text-white text-lg font-bold rounded">
+                Reserve A Table
+              </button>
+            </div>
+          </div>
         ))}
       </div>
-    </section>
+    </div>
+  
+    {/* Desktop view */}
+    <div className="hidden sm:flex justify-center w-full sm:w-1/2">
+      {locations.map((location, index) => (
+        <div
+          key={index}
+          className={`flex justify-center transition-all duration-1000 ease-in-out  ${selectedLocation === index ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'}`}
+        > 
+          <img
+            src={`${location.image}`}
+            alt="Location Image"
+            className="w-full object-cover h-full"
+          />
+        </div>
+      ))}
+    </div>
+  </section>
+  
   );
 }
