@@ -23,7 +23,7 @@ export default function About() {
       {/* Image for larger devices */}
       <div className="hidden sm:flex sm:w-1/2 sm:items-center sm:justify-center">
         <img
-          src="/restaurantstock.jpg"
+          src="/rstock.jpg"
           alt="Location Image"
           className="w-full object-cover h-full"
         />

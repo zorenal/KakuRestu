@@ -22,7 +22,7 @@ const MobileNavbar: React.FC<MobileNavbarProps> = ({ sections }) => {
     };
 
     return (
-        <div className="fixed top-0 right-0 w-full bg-white z-50 p-8 overflow-hidden h-auto ">
+        <nav className="fixed top-0 right-0 w-full bg-white z-50 p-8 overflow-hidden h-auto ">
             <div className="flex items-center justify-between">
               
                 <Link href="/" className="flex items-center">
@@ -63,7 +63,7 @@ const MobileNavbar: React.FC<MobileNavbarProps> = ({ sections }) => {
                 {sections.map((link, index) => (
                     <li
                         key={index}
-                        className={`font-semibold ${link.label === 'RESERVATION' ? 'bg-red-500 px-3 text-white hover:bg-red-600' : 'px-3'}`}
+                        className={`font-semibold ${link.label === 'RESERVATIONS' ? 'bg-red-500 px-3 text-white hover:bg-red-600' : 'px-3'}`}
                     >
                         <Link href={link.href} className="block" onClick={handleSectionClick}>
                             {link.label}
@@ -71,7 +71,7 @@ const MobileNavbar: React.FC<MobileNavbarProps> = ({ sections }) => {
                     </li>
                 ))}
             </ul>
-        </div>
+        </nav>
     );
 };
 

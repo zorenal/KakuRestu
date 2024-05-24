@@ -27,7 +27,7 @@ export default function Navbar() {
         { href: '#Gallery', label: 'GALLERY' },
         { href: '#About', label: 'ABOUT' },
         { href: '#Contact', label: 'CONTACT' },
-        { href: '#', label: 'RESERVATION' }
+        { href: '#', label: 'RESERVATIONS' }
     ];
 
     return (
@@ -45,7 +45,7 @@ export default function Navbar() {
                     <ul className="flex space-x-6">
                         {sections.map((link, index) => (
                             <li
-                                className={`font-semibold ${link.label === 'RESERVATION' ? 'bg-red-500 px-3 text-white hover:bg-red-600' : 'px-3'} ${scrolled ? 'text-black transition-all duration-500' : 'text-white'}`}
+                                className={`font-semibold ${link.label === 'RESERVATIONS' ? 'bg-red-500 px-3 text-white hover:bg-red-600' : 'px-3'} ${scrolled ? 'text-black transition-all duration-500' : 'text-white'}`}
                                 key={index}
                             >
                                 <Link href={link.href}>
