@@ -314,7 +314,7 @@ export default function Menu() {
     <div id="Menu" className="flex flex-col items-center min-h-screen p-4">
       <h1 className="text-3xl font-bold mb-8">Menu</h1>
 
-      <div className="max-w-6xl w-full bg-white shadow-md rounded-lg overflow-hidden">
+      <div className="max-w-3xl w-full overflow-hidden">
         {/* Menu Selection Buttons */}
         <div className="flex flex-wrap justify-evenly mb-4">
           {Object.keys(menuItems).map((category) => (

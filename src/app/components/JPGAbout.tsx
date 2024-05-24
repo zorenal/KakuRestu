@@ -7,7 +7,7 @@ export default function About() {
       <div className="w-full mb-3 sm:hidden">
         <div className="flex items-center justify-center">
           <img
-            src="/restaurantstock.jpg"
+            src="/rstock.jpg"
             alt="Location Image"
             className="w-full object-cover h-32"
           />
