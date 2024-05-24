@@ -69,7 +69,7 @@ export default function HrsnLoc() {
     className="flex flex-col sm:h-auto justify-center"
   >
     {/* Information section */}
-    <div className="flex flex-col items-center w-full overflow-hidden">
+    <div className="flex flex-col items-center w-full overflow-hidden sm:mt-12">
       <div className="flex flex-col items-center w-full">
         <p className="text-2xl sm:text-3xl font-bold mb-5 mt-5">Visit Us</p>
         <div className="flex flex-col items-center w-full">
@@ -146,7 +146,7 @@ export default function HrsnLoc() {
         </div>
       ))}
       {!locations.some((location, index) => selectedLocation === index) && (
-        <div className="flex justify-center transition-all duration-1000 ease-in-out h-1/2 opacity-100">
+        <div className="flex justify-center transition-all duration-1000 ease-in-out h-1/2 opacity-100 mt-5 sm:mt-12">
           <img
             src="rstock.jpg"
             alt="Default Location Image"
