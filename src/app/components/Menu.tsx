@@ -316,12 +316,12 @@ export default function Menu() {
 
       <div className="max-w-6xl w-full bg-white shadow-md rounded-lg overflow-hidden">
         {/* Menu Selection Buttons */}
-        <div className="flex flex-wrap justify-center mb-4">
+        <div className="flex flex-wrap justify-evenly mb-4">
           {Object.keys(menuItems).map((category) => (
             <button
               key={category}
               onClick={() => setSelectedMenu(category)}
-              className={`menu-btn px-4 py-2 border mx-5 rounded-lg ${
+              className={`menu-btn px-4 py-2 border rounded-lg ${
                 selectedMenu === category ? "bg-gray-300" : "bg-white"
               }`}
             >

@@ -64,9 +64,12 @@ export default function HrsnLoc() {
   };
 
   return (
-    <section id="Hours&Location" className="flex flex-col sm:flex-row sm:h-screen justify-center m-5">
+    <section id="Hours&Location" className="flex flex-col sm:flex-row sm:h-screen justify-center sm:m-5">
+
+
+
     {/* Information section */}
-    <div className="flex items-center sm:items-start border border-dotted border-black w-full sm:w-1/2 overflow-hidden">
+    <div className="flex items-center sm:items-start sm:border border-dotted border-black w-full sm:w-1/2 overflow-hidden">
       <div className="flex flex-col items-center w-full">
         <p className="text-2xl sm:text-3xl font-bold mb-5 mt-5">Visit Us</p>
         <div className="flex flex-col items-center w-full">
@@ -114,6 +117,22 @@ export default function HrsnLoc() {
           </div>
         ))}
       </div>
+    </div>
+
+    {/* mobile view */}
+    <div className="sm:hidden sm:w-1/2">
+        {locations.map((location, index) => (
+            <div
+                key={index}
+                className={`flex justify-center transition-all duration-1000 ease-in-out ${selectedLocation === index ? 'h-1/2 opacity-100' : 'max-h-0 opacity-0'}`}
+            > 
+                <img
+                    src={`${location.image}`}
+                    alt="Location Image"
+                    className="w-full object-cover h-full"
+                />
+            </div>
+        ))}
     </div>
   
     {/* Desktop view */}
