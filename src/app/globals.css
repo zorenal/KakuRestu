@@ -33,7 +33,9 @@ body {
 
 html {
   scroll-behavior: smooth !important;
+  scroll-padding-top: 7.5em; 
 }
+
 
 .slider-item {
   position: relative;
