@@ -42,10 +42,10 @@ export default function Navbar() {
                     </Link>
                 </div>
                 <div className="hidden md:flex md:items-center">
-                    <ul className="flex space-x-6">
+                    <ul className="flex space-x-3">
                         {sections.map((link, index) => (
                             <li
-                                className={`font-semibold ${link.label === 'RESERVATIONS' ? 'bg-red-500 px-3 text-white hover:bg-red-600' : 'px-3'} ${scrolled ? 'text-black transition-all duration-500' : 'text-white'}`}
+                                className={`font-semibold ${link.label === 'RESERVATIONS' ? 'bg-red-500 px-4 text-white hover:bg-red-600' : 'px-1'} ${scrolled ? 'text-black transition-all duration-500' : 'text-white'}`}
                                 key={index}
                             >
                                 <Link href={link.href}>

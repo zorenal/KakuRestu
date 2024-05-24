@@ -66,7 +66,7 @@ export default function HrsnLoc() {
   return (
     <section
       id="Hours&Location"
-      className="flex flex-col  sm:h-auto justify-center sm:m-5"
+      className="flex flex-col sm:h-auto justify-center sm:m-5"
     >
       {/* Information section */}
       <div className="flex flex-col items-center border border-dotted border-black w-full overflow-hidden">
