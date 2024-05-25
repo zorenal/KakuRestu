@@ -1,16 +1,18 @@
-import { useRouter } from "next/router";
 import Link from "next/link";
+import { navLinks } from "../../../utils/types";
+
 export default function Navbar() {
-  const links = [ 
+  
+const links: navLinks[] = [ 
     { href: "/location", label: "HOURS & LOCATION" },
     { href: "/menu", label: "MENU" },
-    { href: "/gallery", label: "GALLERY" },
+    // { href: "/gallery", label: "GALLERY" },
     { href: "/about", label: "ABOUT" },
     { href: "/contact", label: "CONTACT" },
     { href: "/", label: "RESERVATIONS" },
-  ];
+];
 
-  return (
+return (
 <nav className="flex bg-white w-screen justify-between items-center">
   <Link href="/"> Logo </Link>
   <ul className="flex justify-end items-center">

@@ -1,3 +1,9 @@
 export type heroImage = {
-    image: string
+    src: string
+    height?: string
+}
+
+export type navLinks = {
+    href: string,
+    label: string
 }
