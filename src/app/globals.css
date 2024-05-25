@@ -33,13 +33,7 @@ body {
 
 html {
   scroll-behavior: smooth !important;
-  scroll-padding-top: 7em; 
+  /* scroll-padding-top: 7em;  */
 }
 
-
-.slider-item {
-  position: relative;
-  width: auto; 
-  height: 100vh; 
-}
 
