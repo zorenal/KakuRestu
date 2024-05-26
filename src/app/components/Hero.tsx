@@ -19,7 +19,7 @@ export default function Hero({ src, altHeight, mobileHeight, label, carousel }: 
     
     const images = ["/Food1.jpg", "/Food2.jpg"];
     return (
-        <div className={`relative ${heightClass} ${mobileHeight} w-full`}>
+        <div className={`relative ${heightClass} ${mobileHeight} w-full overflow-y-hidden`}>
           {carousel ? (
             <Slider {...settings}>
               {images.map((img, index) => (
@@ -30,13 +30,13 @@ export default function Hero({ src, altHeight, mobileHeight, label, carousel }: 
                     fill
                     objectFit="cover"
                     className="-z-50"
-                  />s
+                  />
                   <div className="absolute inset-0 flex items-center justify-center">
                     <div
                       className="text-5xl font-bold text-center text-white overflow-hidden"
                       style={{ textShadow: "3px 3px 10px rgba(0, 0, 0, 0.5)" }}
                     >
-                      JPG Fusion Restaurant
+                      Restaurant
                     </div>
                   </div>
                 </div>
