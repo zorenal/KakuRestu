@@ -6,7 +6,6 @@ export default function Navbar() {
 const links: navLinks[] = [ 
     { href: "/menu", label: "MENU" },
     { href: "/location", label: "HOURS & LOCATION" },
-    // { href: "/gallery", label: "GALLERY" },
     { href: "/about", label: "ABOUT" },
     { href: "/contact", label: "CONTACT" },
     { href: "/", label: "RESERVATIONS" },

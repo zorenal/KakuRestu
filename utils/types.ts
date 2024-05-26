@@ -1,13 +1,14 @@
+export type navLinks = {
+    href: string,
+    label: string
+}
+
 export type heroImage = {
     src: string,
     label?: string,
-    regHeight?: string
+    altHeight?: string
     mobileHeight?: string
     carousel?: boolean
 
 }
 
-export type navLinks = {
-    href: string,
-    label: string
-}
