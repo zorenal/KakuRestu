@@ -43,7 +43,7 @@ export default function Navbar() {
         <ul
           className={`${
             isOpen ? "max-h-screen" : "max-h-0"
-          }   text-center transition-all duration-700 ease-in-out overflow-hidden`}
+          }   text-center transition-all duration-500 ease-in-out overflow-hidden`}
         >
           {links.map((link, index) => (
             <li key={index} className="p-4 text-l">
