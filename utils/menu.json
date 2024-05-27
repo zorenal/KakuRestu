@@ -1,0 +1,72 @@
+
+{
+    "lunch": {
+        "Sushi": [
+            {
+                "name": "Sushi Gyro Wrap",
+                "price": 12,
+                "ingredients": ["Sushi rice", "Gyro meat", "Tzatziki sauce", "Lettuce", "Tomato", "Onion"]
+            },
+            {
+                "name": "Falafel Sushi Roll",
+                "price": 11,
+                "ingredients": ["Sushi rice", "Falafel", "Hummus", "Cucumber", "Tomato", "Tahini sauce"]
+            }
+        ],
+        "Salads": [
+            {
+                "name": "Greek Ramen Salad",
+                "price": 10,
+                "ingredients": ["Ramen noodles", "Feta cheese", "Kalamata olives", "Cucumber", "Red onion", "Greek dressing"]
+            }
+        ]
+    },
+    "dinner": {
+        "Sushi": [
+            {
+                "name": "Tzatziki Sushi Roll",
+                "price": 18,
+                "ingredients": ["Sushi rice", "Tzatziki sauce", "Cucumber", "Gyro meat", "Nori seaweed"]
+            }
+        ],
+        "Mains": [
+            {
+                "name": "Miso Moussaka",
+                "price": 22,
+                "ingredients": ["Eggplant", "Ground beef", "Miso sauce", "Bechamel sauce", "Parmesan cheese"]
+            }
+        ]
+    },
+    "drinks": {
+        "Cocktails": [
+            {
+                "name": "Sake Mojito",
+                "price": 14,
+                "ingredients": ["Sake", "Mint leaves", "Lime", "Simple syrup", "Soda water"]
+            }
+        ],
+        "NonAlcoholic": [
+            {
+                "name": "Persian Iced Tea",
+                "price": 9,
+                "ingredients": ["Black tea", "Cardamom", "Rose water", "Sugar", "Lemon wedge"]
+            }
+        ]
+    },
+    "desserts": {
+        "Cakes": [
+            {
+                "name": "Matcha Baklava Cheesecake",
+                "price": 10,
+                "ingredients": ["Matcha powder", "Baklava", "Cream cheese", "Graham cracker crust"]
+            }
+        ],
+        "Pastries": [
+            {
+                "name": "Baklava Mochi",
+                "price": 8,
+                "ingredients": ["Glutinous rice flour", "Baklava", "Honey", "Pistachios"]
+            }
+        ]
+    }
+}

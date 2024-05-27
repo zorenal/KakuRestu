@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import { navLinks } from "../../../utils/types";
-import { Turn as Hamburger } from "hamburger-react";
+import Hamburger from 'hamburger-react'
 import { useState } from "react";
 
 export default function Navbar() {
