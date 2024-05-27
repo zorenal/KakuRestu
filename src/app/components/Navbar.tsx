@@ -25,7 +25,7 @@ export default function Navbar() {
       <Link href="/" className="hidden md:flex sm:mx-10">
         LOGO
       </Link>
-      <ul className="hidden md:flex justify-end sm:mx-10 items-center">
+      <ul className="hidden md:flex justify-end sm:mx-10 items-center " >
         {links.map((link, index) => (
           <li key={index} className="md:mx-5">
             <Link href={link.href}>{link.label}</Link>

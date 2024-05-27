@@ -16,10 +16,7 @@
   }
 } */
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: rgb(var(--background-start-rgb));
-}
+
 
 @layer utilities {
   .text-balance {
@@ -37,4 +34,9 @@ html {
   /* scroll-padding-top: 7em;  */
 }
 
+body {
+  position: relative;
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-start-rgb));
+}
 

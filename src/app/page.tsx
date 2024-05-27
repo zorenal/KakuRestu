@@ -1,6 +1,7 @@
 import Hero from "./components/Hero";
 import Link from "next/link";
 import Image from "next/image";
+import Footer from "./components/Footer";
 export default function Main() {
   return (
     <section className="h-screen">
@@ -56,6 +57,7 @@ export default function Main() {
           />
         </div>
       </section>
+      <Footer/>
     </section>
   );
 }
