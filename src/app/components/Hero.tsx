@@ -49,7 +49,7 @@ export default function Hero({ src, altHeight, mobileHeight, label, carousel }: 
                 alt="Hero Image"
                 fill
                 objectFit="cover"
-                className="-z-50"
+                className="-z-50 "
               />
     
               <div className="absolute inset-0 flex items-center justify-center">

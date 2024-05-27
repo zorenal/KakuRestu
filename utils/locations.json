@@ -1,0 +1,39 @@
+{
+    "Santa Clara": {
+      "address": "123 Main Street, Santa Clara, CA 95051",
+      "phone": "(408)-653-7000",
+      "hours": {
+        "Monday - Thursday": "10am - 8pm",
+        "Friday": "10am - 10pm",
+        "Saturday": "10am - 12am",
+        "Sunday": "9am - 8pm"
+      },
+      "happyHour": "Monday - Friday 3pm - 6pm",
+      "image": "/out1.jpg"
+    },
+    "Los Angeles": {
+      "address": "1234 Hollywood Blvd, Los Angeles, CA 90028",
+      "phone": "(213)-456-7890",
+      "hours": {
+        "Monday - Thursday": "10am - 8pm",
+        "Friday": "10am - 10pm",
+        "Saturday": "10am - 12am",
+        "Sunday": "9am - 8pm"
+      },
+      "happyHour": "Monday - Friday 4pm - 7pm",
+      "image": "/out2.jpg"
+    },
+    "San Francisco": {
+      "address": "5678 Market St, San Francisco, CA 94102",
+      "phone": "(415)-123-4567",
+      "hours": {
+        "Monday - Thursday": "10am - 8pm",
+        "Friday": "10am - 10pm",
+        "Saturday": "10am - 12am",
+        "Sunday": "9am - 8pm"
+      },
+      "happyHour": "Monday - Friday 3pm - 6pm",
+      "image": "/out3.jpg"
+    }
+  }
+  

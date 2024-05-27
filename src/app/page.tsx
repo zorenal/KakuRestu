@@ -5,7 +5,7 @@ import Footer from "./components/Footer";
 export default function Main() {
   return (
     <section className="h-screen">
-      <Hero src="/Food1.jpg" altHeight="h-screen" label="Restaurant" carousel={true}/>
+      <Hero src="/Food1.jpg" label="Restaurant" carousel={true}/>
       <section className="h-1/2 flex">
       <div className="w-1/2 flex items-center justify-center">
           <Link href="/" className="bg-red-200 p-8">

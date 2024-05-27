@@ -1,8 +1,12 @@
+import Footer from "../components/Footer"
 import Hero from "../components/Hero"
+import Locations from "../components/Locations"
 export default function Location(){
+
 return (
- <section className="h-screen">
-    <Hero src='/out2.jpg' mobileHeight='h-1/3' altHeight='sm:h-1/2' label='Hours and Location'/>
+ <section>
+    <Locations/>
+    <Footer/>
  </section>
     )
 }

@@ -43,6 +43,30 @@
                 "price": 11,
                 "ingredients": "Soba noodles, Sesame seeds, Scallions, Carrots, Cabbage, Sesame dressing"
             }
+        ],
+        "Bento Boxes": [
+            {
+                "name": "Vegetarian Bento",
+                "price": 15,
+                "ingredients": "Sushi rice, Tempura vegetables, Edamame, Tamagoyaki, Pickled vegetables"
+            },
+            {
+                "name": "Chicken Teriyaki Bento",
+                "price": 17,
+                "ingredients": "Sushi rice, Chicken teriyaki, Steamed vegetables, Gyoza, Pickled vegetables"
+            }
+        ],
+        "Sandwiches": [
+            {
+                "name": "Katsu Sando",
+                "price": 13,
+                "ingredients": "Panko-crusted pork cutlet, Tonkatsu sauce, Cabbage slaw, Milk bread"
+            },
+            {
+                "name": "Tofu Banh Mi",
+                "price": 12,
+                "ingredients": "Marinated tofu, Pickled vegetables, Cilantro, Sriracha mayo, Baguette"
+            }
         ]
     },
     "dinner": {
@@ -66,6 +90,11 @@
                 "name": "Tempura Shrimp Roll",
                 "price": 17,
                 "ingredients": "Sushi rice, Tempura shrimp, Avocado, Cucumber, Nori seaweed, Spicy mayo"
+            },
+            {
+                "name": "Rainbow Roll",
+                "price": 21,
+                "ingredients": "Sushi rice, Tuna, Salmon, Shrimp, Avocado, Cucumber, Nori seaweed"
             }
         ],
         "Mains": [
@@ -88,6 +117,23 @@
                 "name": "Ginger Soy Beef Souvlaki",
                 "price": 23,
                 "ingredients": "Beef, Ginger soy marinade, Pita bread, Hummus, Lettuce, Tomato"
+            },
+            {
+                "name": "Seafood Paella",
+                "price": 27,
+                "ingredients": "Shrimp, Mussels, Clams, Saffron rice, Peas, Red bell pepper"
+            }
+        ],
+        "Small Plates": [
+            {
+                "name": "Spicy Edamame",
+                "price": 7,
+                "ingredients": "Edamame, Spicy garlic sauce, Sesame seeds"
+            },
+            {
+                "name": "Chicken Karaage",
+                "price": 10,
+                "ingredients": "Fried chicken, Lemon wedge, Garlic mayo"
             }
         ]
     },
@@ -112,9 +158,19 @@
                 "name": "Lychee Martini",
                 "price": 14,
                 "ingredients": "Vodka, Lychee liqueur, Lychee juice, Lychee fruit"
+            },
+            {
+                "name": "Plum Wine Sangria",
+                "price": 14,
+                "ingredients": "Plum wine, Red wine, Mixed berries, Orange, Lemon"
+            },
+            {
+                "name": "Wasabi Bloody Mary",
+                "price": 13,
+                "ingredients": "Vodka, Tomato juice, Wasabi, Lemon juice, Celery stick"
             }
         ],
-        "NonAlcoholic": [
+        "Beverages": [
             {
                 "name": "Persian Iced Tea",
                 "price": 9,
@@ -134,6 +190,16 @@
                 "name": "Pomegranate Iced Tea",
                 "price": 9,
                 "ingredients": "Black tea, Pomegranate juice, Sugar, Lemon wedge"
+            },
+            {
+                "name": "Ginger Lemon Fizz",
+                "price": 8,
+                "ingredients": "Ginger syrup, Lemon juice, Soda water, Mint"
+            },
+            {
+                "name": "Yuzu Soda",
+                "price": 7,
+                "ingredients": "Yuzu juice, Soda water, Simple syrup, Ice"
             }
         ]
     },
@@ -158,6 +224,11 @@
                 "name": "Green Tea Tiramisu",
                 "price": 10,
                 "ingredients": "Green tea, Mascarpone cheese, Ladyfingers, Sugar, Matcha powder"
+            },
+            {
+                "name": "Mochi Ice Cream Cake",
+                "price": 10,
+                "ingredients": "Mochi, Ice cream, Sweet rice flour, Sugar"
             }
         ],
         "Pastries": [
@@ -180,6 +251,16 @@
                 "name": "Ginger Almond Biscotti",
                 "price": 6,
                 "ingredients": "Almonds, Ginger, Flour, Sugar, Eggs"
+            },
+            {
+                "name": "Yuzu Macarons",
+                "price": 8,
+                "ingredients": "Almond flour, Egg whites, Sugar, Yuzu curd"
+            },
+            {
+                "name": "Matcha Cream Puff",
+                "price": 7,
+                "ingredients": "Choux pastry, Matcha cream, Powdered sugar"
             }
         ]
     }

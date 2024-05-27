@@ -27,8 +27,8 @@ export default function MenuComponent() {
               </button>
             ))}
           </div>
-          <div className="overflow-y-auto h-full">
-            <div className="grid grid-cols-2 gap-y-0 gap-x-0 p-4">
+          <div className="overflow-y-auto h-3/4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-0 gap-x-0 p-4">
               {Object.keys(menuItem[selectedMenu]).map((subcategory) => (
                 <div key={subcategory} className="mb-6">
                   <h2 className="text-xl font-semibold mb-4 underline">
