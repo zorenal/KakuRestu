@@ -13,14 +13,14 @@ export type heroImage = {
 
 
 export type menuItem = {
-    name: string;
-    price: number;
-    ingredients: string[];
-    image?: string; // Image is optional
+  name: string;
+  price: number;
+  ingredients: string;
+  image?: string; // Image is optional
 };
 
 export type menuType = {
-    [category: string]: {
-        [subcategory: string]: menuItem[];
-    };
+  [category: string]: {
+      [subcategory: string]: menuItem[];
+  };
 };

@@ -1,23 +1,47 @@
-
 {
-    "lunch": {
+    "brunch": {
         "Sushi": [
             {
                 "name": "Sushi Gyro Wrap",
                 "price": 12,
-                "ingredients": ["Sushi rice", "Gyro meat", "Tzatziki sauce", "Lettuce", "Tomato", "Onion"]
+                "ingredients": "Sushi rice, Gyro meat, Tzatziki sauce, Lettuce, Tomato, Onion"
             },
             {
                 "name": "Falafel Sushi Roll",
                 "price": 11,
-                "ingredients": ["Sushi rice", "Falafel", "Hummus", "Cucumber", "Tomato", "Tahini sauce"]
+                "ingredients": "Sushi rice, Falafel, Hummus, Cucumber, Tomato, Tahini sauce"
+            },
+            {
+                "name": "Avocado Quinoa Sushi",
+                "price": 13,
+                "ingredients": "Sushi rice, Avocado, Quinoa, Cucumber, Carrot, Soy sauce"
+            },
+            {
+                "name": "Smoked Salmon Sushi Bagel",
+                "price": 14,
+                "ingredients": "Sushi rice, Smoked salmon, Cream cheese, Capers, Red onion, Everything bagel seasoning"
             }
         ],
         "Salads": [
             {
                 "name": "Greek Ramen Salad",
                 "price": 10,
-                "ingredients": ["Ramen noodles", "Feta cheese", "Kalamata olives", "Cucumber", "Red onion", "Greek dressing"]
+                "ingredients": "Ramen noodles, Feta cheese, Kalamata olives, Cucumber, Red onion, Greek dressing"
+            },
+            {
+                "name": "Miso Caesar Salad",
+                "price": 12,
+                "ingredients": "Romaine lettuce, Parmesan cheese, Croutons, Miso dressing, Anchovies, Lemon"
+            },
+            {
+                "name": "Edamame Chickpea Salad",
+                "price": 11,
+                "ingredients": "Edamame, Chickpeas, Red bell pepper, Red onion, Cilantro, Lemon vinaigrette"
+            },
+            {
+                "name": "Sesame Noodle Salad",
+                "price": 11,
+                "ingredients": "Soba noodles, Sesame seeds, Scallions, Carrots, Cabbage, Sesame dressing"
             }
         ]
     },
@@ -26,14 +50,44 @@
             {
                 "name": "Tzatziki Sushi Roll",
                 "price": 18,
-                "ingredients": ["Sushi rice", "Tzatziki sauce", "Cucumber", "Gyro meat", "Nori seaweed"]
+                "ingredients": "Sushi rice, Tzatziki sauce, Cucumber, Gyro meat, Nori seaweed"
+            },
+            {
+                "name": "Spicy Tuna Roll",
+                "price": 19,
+                "ingredients": "Sushi rice, Spicy tuna, Avocado, Cucumber, Nori seaweed, Spicy mayo"
+            },
+            {
+                "name": "Dragon Roll",
+                "price": 20,
+                "ingredients": "Sushi rice, Eel, Avocado, Cucumber, Nori seaweed, Eel sauce"
+            },
+            {
+                "name": "Tempura Shrimp Roll",
+                "price": 17,
+                "ingredients": "Sushi rice, Tempura shrimp, Avocado, Cucumber, Nori seaweed, Spicy mayo"
             }
         ],
         "Mains": [
             {
                 "name": "Miso Moussaka",
                 "price": 22,
-                "ingredients": ["Eggplant", "Ground beef", "Miso sauce", "Bechamel sauce", "Parmesan cheese"]
+                "ingredients": "Eggplant, Ground beef, Miso sauce, Bechamel sauce, Parmesan cheese"
+            },
+            {
+                "name": "Teriyaki Chicken Souvlaki",
+                "price": 20,
+                "ingredients": "Chicken, Teriyaki sauce, Pita bread, Tzatziki sauce, Lettuce, Tomato"
+            },
+            {
+                "name": "Lamb Shank Ramen",
+                "price": 25,
+                "ingredients": "Lamb shank, Ramen noodles, Bok choy, Soft-boiled egg, Scallions, Miso broth"
+            },
+            {
+                "name": "Ginger Soy Beef Souvlaki",
+                "price": 23,
+                "ingredients": "Beef, Ginger soy marinade, Pita bread, Hummus, Lettuce, Tomato"
             }
         ]
     },
@@ -42,14 +96,44 @@
             {
                 "name": "Sake Mojito",
                 "price": 14,
-                "ingredients": ["Sake", "Mint leaves", "Lime", "Simple syrup", "Soda water"]
+                "ingredients": "Sake, Mint leaves, Lime, Simple syrup, Soda water"
+            },
+            {
+                "name": "Yuzu Margarita",
+                "price": 15,
+                "ingredients": "Tequila, Yuzu juice, Triple sec, Agave syrup, Salt rim"
+            },
+            {
+                "name": "Ginger Saketini",
+                "price": 13,
+                "ingredients": "Sake, Vodka, Ginger syrup, Lemon twist"
+            },
+            {
+                "name": "Lychee Martini",
+                "price": 14,
+                "ingredients": "Vodka, Lychee liqueur, Lychee juice, Lychee fruit"
             }
         ],
         "NonAlcoholic": [
             {
                 "name": "Persian Iced Tea",
                 "price": 9,
-                "ingredients": ["Black tea", "Cardamom", "Rose water", "Sugar", "Lemon wedge"]
+                "ingredients": "Black tea, Cardamom, Rose water, Sugar, Lemon wedge"
+            },
+            {
+                "name": "Matcha Lemonade",
+                "price": 8,
+                "ingredients": "Matcha powder, Lemon juice, Simple syrup, Water, Ice"
+            },
+            {
+                "name": "Cucumber Mint Cooler",
+                "price": 8,
+                "ingredients": "Cucumber, Mint leaves, Lime juice, Simple syrup, Soda water"
+            },
+            {
+                "name": "Pomegranate Iced Tea",
+                "price": 9,
+                "ingredients": "Black tea, Pomegranate juice, Sugar, Lemon wedge"
             }
         ]
     },
@@ -58,14 +142,44 @@
             {
                 "name": "Matcha Baklava Cheesecake",
                 "price": 10,
-                "ingredients": ["Matcha powder", "Baklava", "Cream cheese", "Graham cracker crust"]
+                "ingredients": "Matcha powder, Baklava, Cream cheese, Graham cracker crust"
+            },
+            {
+                "name": "Yuzu Lemon Tart",
+                "price": 9,
+                "ingredients": "Yuzu juice, Lemon zest, Sugar, Butter, Tart crust"
+            },
+            {
+                "name": "Sesame Chocolate Cake",
+                "price": 11,
+                "ingredients": "Sesame seeds, Dark chocolate, Flour, Sugar, Butter"
+            },
+            {
+                "name": "Green Tea Tiramisu",
+                "price": 10,
+                "ingredients": "Green tea, Mascarpone cheese, Ladyfingers, Sugar, Matcha powder"
             }
         ],
         "Pastries": [
             {
                 "name": "Baklava Mochi",
                 "price": 8,
-                "ingredients": ["Glutinous rice flour", "Baklava", "Honey", "Pistachios"]
+                "ingredients": "Glutinous rice flour, Baklava, Honey, Pistachios"
+            },
+            {
+                "name": "Red Bean Custard Tart",
+                "price": 7,
+                "ingredients": "Red bean paste, Custard, Tart crust, Sugar, Egg"
+            },
+            {
+                "name": "Miso Caramel Éclair",
+                "price": 9,
+                "ingredients": "Choux pastry, Miso caramel, Cream filling, Chocolate glaze"
+            },
+            {
+                "name": "Ginger Almond Biscotti",
+                "price": 6,
+                "ingredients": "Almonds, Ginger, Flour, Sugar, Eggs"
             }
         ]
     }

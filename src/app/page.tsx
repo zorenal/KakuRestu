@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 export default function Main() {
   return (
-    <section className="h-screen">
+    <section>
       <Hero src="/Food1.jpg" altHeight="h-screen" label="Restaurant" carousel={true}/>
       <section className="h-1/2 flex">
       <div className="w-1/2 flex items-center justify-center">
