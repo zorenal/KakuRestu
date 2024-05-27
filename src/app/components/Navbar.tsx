@@ -42,7 +42,7 @@ export default function Navbar() {
 
         <ul
           className={`${
-            isOpen ? "max-h-screen" : "max-h-0"
+            isOpen ? "max-h-screen" : "max-h-0 invisible"
           }   text-center transition-all duration-500 ease-in-out overflow-hidden`}
         >
           {links.map((link, index) => (
