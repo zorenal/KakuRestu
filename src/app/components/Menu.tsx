@@ -5,7 +5,7 @@ import { menuType } from '../../../utils/types';
 import { useState } from "react";
 
 export default function MenuComponent() {
-    const [selectedMenu, setSelectedMenu] = useState("brunch");
+    const [selectedMenu, setSelectedMenu] = useState<string>("brunch");
     const menuItem: menuType = menuData;
    
     return (

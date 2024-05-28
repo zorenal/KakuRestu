@@ -13,7 +13,7 @@ export default function Navbar() {
     { href: "/", label: "RESERVATIONS" },
   ];
 
-  const [isOpen, setOpen] = useState(false);
+  const [isOpen, setOpen] = useState<boolean>(false);
 
   const handleMenu = () => {
     setOpen(false);

@@ -1,35 +1,47 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import locationData from "@/../utils/locations.json";
 import { locationType } from "../../../utils/types";
 import Image from "next/image";
 
 export default function Locations() {
-  const [selectedLocation, setSelectedLocation] = useState<string | null>(null);
 
-  const locationInfo: locationType = locationData;
+
+ const locationInfo: locationType = locationData;
+ const [selectedLocation, setSelectedLocation] = useState<string | null>(null);
+ const [src, setSrc] = useState<string>('/rstock.jpg');
+ const [fade, setFade] = useState<boolean>(false);
 
   const handleLocationClick = (location: string) => {
     setSelectedLocation(location);
   };
+  
+  useEffect(() => {
+    if (selectedLocation) {
+      setFade(true);
+      setTimeout(() => {
+        setSrc(locationInfo[selectedLocation]?.image || '/rstock.jpg');
+        setFade(false);
+      }, 500);
+    } else {
+      setSrc('/rstock.jpg');
+    }
+  }, [selectedLocation, locationInfo]);
 
   return (
-<section className="flex flex-col h-screen">
-  {/* image */}
-  <div className="h-1/3 sm:h-1/2 relative">
-    <Image
-      src={
-        selectedLocation && locationInfo[selectedLocation].image
-          ? locationInfo[selectedLocation].image
-          : "/rstock.jpg"
-      }
-      alt={`${selectedLocation || 'default'} image`}
-      layout="fill"
-      objectFit="cover"
-      className="-z-10 transition-opacity duration-1000 ease-in-out opacity-100 "
-    />
-  </div>
+    <section className="flex flex-col h-screen">
+     
+      {/* image */}
+      <div className="h-1/3 sm:h-1/2 relative">
+        <Image
+          src={src}
+          alt={`${selectedLocation || 'default'} image`}
+          layout="fill"
+          objectFit="cover"
+          className={`-z-10 transition-opacity duration-500 ease-in-out ${fade ? 'opacity-0' : 'opacity-100'}`}
+        />
+      </div>
 
   {/* content */}
   <div className="flex flex-col  justify-between items-center">
