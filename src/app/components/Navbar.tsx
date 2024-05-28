@@ -18,11 +18,13 @@ export default function Navbar() {
   window.onscroll = function() {
     const navbar = document.querySelector(".nav");
     if (window.scrollY > 0) {
-      navbar.classList.add("fixed", "top-0", "left-0", "w-full", "shadow-md");
+        navbar.classList.add("fixed", "shadow-md", "p-5");
+        navbar.classList.remove("p-10");
     } else {
-      navbar.classList.remove("fixed", "top-0", "left-0", "w-full", "shadow-md");
+        navbar.classList.remove("fixed", "shadow-md", "p-5");
+        navbar.classList.add("p-10");
     }
-  };
+};
 
 
   const handleMenu = () => {
@@ -30,7 +32,7 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="nav flex bg-white w-screen justify-between items-center z-50 overflow-hidden p-5 font-bold ">
+    <nav className="nav flex bg-white w-screen justify-between items-center z-50 overflow-hidden p-10 font-bold transition-all duration-300">
       {/* Larger Screens */}
       <Link href="/" className="hidden md:flex sm:mx-10">
         LOGO
