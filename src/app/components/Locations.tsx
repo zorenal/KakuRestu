@@ -17,7 +17,7 @@ export default function Locations() {
   return (
     <section className="flex flex-col h-screen">
       {/* image */}
-      <div className="h-1/2 relative">
+      <div className=" h-1/3 sm:h-1/2 relative">
         {selectedLocation && locationInfo[selectedLocation].image && (
           <Image
             src={locationInfo[selectedLocation].image}
