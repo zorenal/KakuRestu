@@ -62,7 +62,7 @@ export default function LocationsComponent() {
     </div>
 
     {/* info */}
-    <div className="w-screen p-4">
+    {/* <div className="w-screen p-4">
     {selectedLocation && (
       <div className="text-center">
         <h2 className="text-2xl font-bold">{selectedLocation}</h2>
@@ -83,7 +83,40 @@ export default function LocationsComponent() {
         )}
       </div>
     )}
+  </div> */}
+  <div className="w-screen p-4">
+  <div className={`text-center transition-opacity duration-300 ${fade ? 'hidden' : 'opacity-100'}`}>
+    <h2 className="text-2xl font-bold">
+      {selectedLocation || 'Select a location'}
+    </h2>
+    <p className="mt-2 underline">
+      {selectedLocation ? locationInfo[selectedLocation].address : 'Address will be displayed here'}
+    </p>
+    <p className="mt-2 underline">
+      {selectedLocation ? locationInfo[selectedLocation].phone : 'Phone number will be displayed here'}
+    </p>
+    <p className="mt-4 font-bold">Hours:</p>
+    <ul>
+      {selectedLocation ? (
+        Object.entries(locationInfo[selectedLocation].hours).map(([day, time]) => (
+          <li key={day}>
+            <span className="font-bold">{day}</span>: <span>{time}</span>
+          </li>
+        ))
+      ) : (
+        <li>Select a location to see the hours</li>
+      )}
+    </ul>
+    {selectedLocation && locationInfo[selectedLocation].happyHour ? (
+      <p className="mt-4 font-bold">
+        Happy Hour: {locationInfo[selectedLocation].happyHour}
+      </p>
+    ) : (
+      <p className="mt-4 font-bold">Happy Hour information will be displayed here</p>
+    )}
   </div>
+</div>
+
   </div>
 </section>
 
