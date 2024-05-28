@@ -36,7 +36,7 @@ export default function Hero({ src, altHeight, mobileHeight, label, carousel }: 
                       className="text-5xl font-bold text-center text-white overflow-hidden"
                       style={{ textShadow: "3px 3px 10px rgba(0, 0, 0, 0.5)" }}
                     >
-                      Restaurant
+                      {label}
                     </div>
                   </div>
                 </div>

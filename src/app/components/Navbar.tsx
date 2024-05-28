@@ -52,7 +52,7 @@ export default function Navbar() {
       {/* Mobile Devices */}
       <div className="md:hidden lg:hidden w-screen">
         <div className="flex justify-between items-center overflow-hidden">
-          <Link href="/">LOGO</Link>
+          <Link href="/">Placeholder</Link>
           <Hamburger toggled={isOpen} toggle={setOpen} rounded />
         </div>
 
