@@ -9,8 +9,7 @@ export default function Navbar() {
     { href: "/menu", label: "MENU" },
     { href: "/location", label: "HOURS & LOCATION" },
     { href: "/about", label: "ABOUT" },
-    { href: "/contact", label: "CONTACT" },
-    { href: "/", label: "RESERVATIONS" },
+    { href: "https://www.opentable.com/", label: "RESERVATIONS" },
   ];
 
   const [isOpen, setOpen] = useState<boolean>(false);
@@ -28,7 +27,11 @@ export default function Navbar() {
       <ul className="hidden md:flex justify-end sm:mx-10 items-center " >
         {links.map((link, index) => (
           <li key={index} className="md:mx-5">
-            <Link href={link.href}>{link.label}</Link>
+            {link.label === "RESERVATIONS" ? (
+              <a href={link.href} target="_blank" rel="noopener noreferrer">{link.label}</a>
+            ) : (
+              <Link href={link.href}>{link.label}</Link>
+            )}
           </li>
         ))}
       </ul>
@@ -43,13 +46,19 @@ export default function Navbar() {
         <ul
           className={`${
             isOpen ? "max-h-screen" : "max-h-0 invisible"
-          }   text-center transition-all duration-500 ease-in-out overflow-hidden`}
+          } text-center transition-all duration-500 ease-in-out overflow-hidden`}
         >
           {links.map((link, index) => (
             <li key={index} className="p-4 text-l">
-              <Link href={link.href} onClick={handleMenu}>
-                {link.label}
-              </Link>
+              {link.label === "RESERVATIONS" ? (
+                <Link href={link.href} target="_blank" rel="noopener noreferrer" onClick={handleMenu}>
+                  {link.label}
+                </Link>
+              ) : (
+                <Link href={link.href} onClick={handleMenu}>
+                  {link.label}
+                </Link>
+              )}
             </li>
           ))}
         </ul>

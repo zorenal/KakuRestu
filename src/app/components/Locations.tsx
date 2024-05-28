@@ -5,7 +5,7 @@ import locationData from "@/../utils/locations.json";
 import { locationType } from "../../../utils/types";
 import Image from "next/image";
 
-export default function Locations() {
+export default function LocationsComponent() {
 
 
  const locationInfo: locationType = locationData;

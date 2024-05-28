@@ -1,11 +1,11 @@
 import Footer from "../components/Footer"
 import Hero from "../components/Hero"
-import Locations from "../components/Locations"
+import LocationsComponent from "../components/Locations"
 export default function Location(){
 
 return (
  <section>
-    <Locations/>
+    <LocationsComponent/>
     <Footer/>
  </section>
     )
