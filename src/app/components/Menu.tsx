@@ -13,7 +13,6 @@ export default function MenuComponent() {
         <h1 className="text-3xl font-bold mb-8">Menu</h1>
   
         <div className="max-w-3xl w-full overflow-hidden">
-          {/* Menu Selection Buttons */}
           <div className="flex flex-wrap justify-evenly mb-4">
             {Object.keys(menuItem).map((category) => (
               <button
