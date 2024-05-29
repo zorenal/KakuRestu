@@ -5,6 +5,7 @@ import Footer from "./components/Footer";
 export default function Main() {
   return (
     <section className="min-h-screen">
+       
       <Hero src="/Food1.jpg" label="Placeholder" carousel={true}/>
 
       <section className="h-1/2 flex">

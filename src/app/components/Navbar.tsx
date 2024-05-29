@@ -12,32 +12,35 @@ export default function Navbar() {
     { href: "https://www.opentable.com/", label: "RESERVATIONS" },
   ];
 
-
   const [isOpen, setOpen] = useState<boolean>(false);
+  const [scrolled, setScrolled] = useState<boolean>(false);
 
-  window.onscroll = function() {
-    const navbar = document.querySelector(".nav");
-    if (window.scrollY > 0) {
-        navbar.classList.add("fixed", "shadow-md", "p-5");
-        navbar.classList.remove("p-10");
-    } else {
-        navbar.classList.remove("fixed", "shadow-md", "p-5");
-        navbar.classList.add("p-10");
-    }
-};
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
 
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   const handleMenu = () => {
     setOpen(false);
   };
 
   return (
-    <nav className="nav flex bg-white w-screen justify-between items-center z-50 overflow-hidden p-10 font-bold transition-all duration-300">
+    <nav className={`fixed top-0 left-0 w-full flex items-center justify-between p-6 z-10 bg-white transition-all duration-300 ${scrolled ? "p-5" : "p-12"}`}>
       {/* Larger Screens */}
       <Link href="/" className="hidden md:flex sm:mx-10">
         LOGO
       </Link>
-      <ul className="hidden sm:flex justify-end sm:mx-10 items-center" >
+      <ul className="hidden sm:flex justify-end sm:mx-10 items-center">
         {links.map((link, index) => (
           <li key={index} className="sm:mx-5 py-5">
             {link.label === "RESERVATIONS" ? (

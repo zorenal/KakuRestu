@@ -20,8 +20,8 @@ export default function Hero({ src, label, carousel }: heroImage) {
     return (
         <Slider {...settings}>
             {images.map((img, index) => (
-                <div key={index} className="h-screen">
-                    <div className="h-1/2 w-full">
+                <div key={index} className="relative h-screen bg-cover bg-center">
+                    <div className="absolute inset-0 bg-black bg-opacity-20 flex flex-col items-center justify-center">
                         <Image
                             src={img}
                             alt="Hero Image"
@@ -29,16 +29,13 @@ export default function Hero({ src, label, carousel }: heroImage) {
                             objectFit="cover"
                             className="-z-50"
                         />
-
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/60"></div>
-          <div className="absolute inset-0 bg-gradient-to-t from-transparent to-black/40"></div>
               
                         <div className="absolute inset-0 flex items-center justify-center">
                             <div
                                 className="text-5xl font-bold text-center text-white overflow-hidden"
                                 style={{ textShadow: "3px 3px 10px rgba(0, 0, 0, 0.5)" }}
                             >
-                                {label}
+                           
                             </div>
                         </div>
                     </div>
