@@ -21,7 +21,7 @@ export default function Hero({ src, label, carousel }: heroImage) {
         <Slider {...settings}>
             {images.map((img, index) => (
                 <div key={index} className="relative h-screen bg-cover bg-center">
-                    <div className="absolute inset-0 bg-black bg-opacity-20 flex flex-col items-center justify-center">
+                    <div className="absolute inset-0 bg-black bg-opacity-30 flex flex-col items-center justify-center">
                         <Image
                             src={img}
                             alt="Hero Image"

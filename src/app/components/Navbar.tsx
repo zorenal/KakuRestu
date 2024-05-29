@@ -17,7 +17,7 @@ export default function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 0) {
+      if (window.scrollY > 100) {
         setScrolled(true);
       } else {
         setScrolled(false);
@@ -35,7 +35,7 @@ export default function Navbar() {
   };
 
   return (
-    <nav className={`fixed top-0 left-0 w-full flex items-center justify-between p-6 z-10 bg-white transition-all duration-300 ${scrolled ? "p-5" : "p-12"}`}>
+    <nav className={`fixed top-0 left-0 w-full flex items-center justify-between z-10 text-xl font-bold transition-all duration-300 ${scrolled ? "p-5 text-black bg-white " : "p-10 bg-transparent text-shadow text-white"}`}>
       {/* Larger Screens */}
       <Link href="/" className="hidden md:flex sm:mx-10">
         LOGO
@@ -44,9 +44,9 @@ export default function Navbar() {
         {links.map((link, index) => (
           <li key={index} className="sm:mx-5 py-5">
             {link.label === "RESERVATIONS" ? (
-              <Link href={link.href} target="_blank" rel="noopener noreferrer" className="border border-black px-4 py-2">{link.label}</Link>
+              <Link href={link.href} target="_blank" rel="noopener noreferrer" className="border border-black px-4 py-2 hover:bg-yellow-500 hover:text-white hover:transition-all hover:duration-300 ">{link.label}</Link>
             ) : (
-              <Link href={link.href}>{link.label}</Link>
+              <Link href={link.href} className="hover:text-gray-300 hover:transition-all hover:duration-300">{link.label}</Link>
             )}
           </li>
         ))}
