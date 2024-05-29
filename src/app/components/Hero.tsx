@@ -13,9 +13,11 @@ export default function Hero({ src, label, carousel }: heroImage) {
         infinite: true,
         speed: 500,
         autoplay: true,
-        autoplaySpeed: 5000,
+        autoplaySpeed: 3000,
+        swipe: false
       };
     
+ 
     const images = ["/Food1.jpg", "/Food2.jpg"];
     return (
         <Slider {...settings}>
@@ -23,7 +25,7 @@ export default function Hero({ src, label, carousel }: heroImage) {
                 <div key={index} className="relative h-screen bg-cover bg-center">
                     <div className="absolute inset-0 bg-black bg-opacity-30 flex flex-col items-center justify-center">
                         <Image
-                            src={img}
+                            src={`${carousel ? img : src}`}
                             alt="Hero Image"
                             layout="fill"
                             objectFit="cover"
@@ -35,7 +37,7 @@ export default function Hero({ src, label, carousel }: heroImage) {
                                 className="text-5xl font-bold text-center text-white overflow-hidden"
                                 style={{ textShadow: "3px 3px 10px rgba(0, 0, 0, 0.5)" }}
                             >
-                           
+                           {label}
                             </div>
                         </div>
                     </div>

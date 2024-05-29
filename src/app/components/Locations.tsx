@@ -30,20 +30,22 @@ export default function LocationsComponent() {
   }, [selectedLocation, locationInfo]);
 
   return (
-    <section className="flex flex-col h-screen">
+    <section className="flex flex-col">
      
       {/* image */}
-      <div className={`h-1/3 sm:h-1/2 relative -z-10 transition-opacity duration-500 ease-in-out ${fade ? 'opacity-0' : 'opacity-100'}`} >
-        <Image
-          src={src}
-          alt={`${selectedLocation || 'default'} image`}
-          fill
-          objectFit="cover"
-        />
-      </div>
+    <div className={`h-screen relative transition-opacity duration-500 ease-in-out ${fade ? 'opacity-0' : 'opacity-100'}`} >
+  {/* Dark overlay */}
+  <div className="absolute inset-0 bg-black opacity-30 z-10"></div>
+  <Image
+    src={src}
+    alt={`${selectedLocation || 'default'} image`}
+    fill
+    objectFit="cover"
+  />
+</div>
 
   {/* content */}
-  <div className="flex flex-col justify-between items-center">
+  <div className=" justify-between items-center h-screen">
     {/* buttons */}
     <div className="mt-4 w-screen ">
       <ul className="flex flex-col items-center">
@@ -83,6 +85,7 @@ export default function LocationsComponent() {
       </div>
     )}
   </div> */}
+
   <div className="w-screen p-4">
       <div className='text-center'>
         <h2 className="text-2xl font-bold">
