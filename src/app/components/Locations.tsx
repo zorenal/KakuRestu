@@ -33,25 +33,24 @@ export default function LocationsComponent() {
     <section className="flex flex-col h-screen">
      
       {/* image */}
-      <div className="h-1/3 sm:h-1/2 relative">
+      <div className={`h-1/3 sm:h-1/2 relative -z-10 transition-opacity duration-500 ease-in-out ${fade ? 'opacity-0' : 'opacity-100'}`} >
         <Image
           src={src}
           alt={`${selectedLocation || 'default'} image`}
-          layout="fill"
+          fill
           objectFit="cover"
-          className={`-z-10 transition-opacity duration-500 ease-in-out ${fade ? 'opacity-0' : 'opacity-100'}`}
         />
       </div>
 
   {/* content */}
-  <div className="flex flex-col  justify-between items-center">
+  <div className="flex flex-col justify-between items-center">
     {/* buttons */}
-    <div className="mt-4">
+    <div className="mt-4 w-screen ">
       <ul className="flex flex-col items-center">
         {Object.keys(locationInfo).map((loc) => (
           <li key={loc} className="mb-2">
             <button
-              className="px-4 py-2 bg-blue-500 text-white rounded"
+              className={`p-2 text-white rounded ${selectedLocation === loc ? "bg-red-500 p-5 " : 'bg-blue-500'}`}
               onClick={() => handleLocationClick(loc)}
             >
               {loc}
@@ -85,37 +84,36 @@ export default function LocationsComponent() {
     )}
   </div> */}
   <div className="w-screen p-4">
-  <div className={`text-center transition-opacity duration-300 ${fade ? 'hidden' : 'opacity-100'}`}>
-    <h2 className="text-2xl font-bold">
-      {selectedLocation || 'Select a location'}
-    </h2>
-    <p className="mt-2 underline">
-      {selectedLocation ? locationInfo[selectedLocation].address : 'Address will be displayed here'}
-    </p>
-    <p className="mt-2 underline">
-      {selectedLocation ? locationInfo[selectedLocation].phone : 'Phone number will be displayed here'}
-    </p>
-    <p className="mt-4 font-bold">Hours:</p>
-    <ul>
-      {selectedLocation ? (
-        Object.entries(locationInfo[selectedLocation].hours).map(([day, time]) => (
-          <li key={day}>
-            <span className="font-bold">{day}</span>: <span>{time}</span>
-          </li>
-        ))
-      ) : (
-        <li>Select a location to see the hours</li>
-      )}
-    </ul>
-    {selectedLocation && locationInfo[selectedLocation].happyHour ? (
-      <p className="mt-4 font-bold">
-        Happy Hour: {locationInfo[selectedLocation].happyHour}
-      </p>
-    ) : (
-      <p className="mt-4 font-bold">Happy Hour information will be displayed here</p>
-    )}
-  </div>
-</div>
+      <div className='text-center'>
+        <h2 className="text-2xl font-bold">
+          {selectedLocation}
+        </h2>
+        <p className="mt-2 underline">
+          {selectedLocation ? locationInfo[selectedLocation].address : ''}
+        </p>
+        <p className="mt-2 underline">
+          {selectedLocation ? locationInfo[selectedLocation].phone : ''}
+        </p>
+        <ul>
+          {selectedLocation ? (
+            Object.entries(locationInfo[selectedLocation].hours).map(([day, time]) => (
+              <li key={day}>
+                <span className="font-bold">{day}</span>: <span>{time}</span>
+              </li>
+            ))
+          ) : (
+            <></>
+          )}
+        </ul>
+        {selectedLocation && locationInfo[selectedLocation].happyHour ? (
+          <p className="mt-4 font-bold">
+            Happy Hour: {locationInfo[selectedLocation].happyHour}
+          </p>
+        ) : (
+          <></>
+        )}
+      </div>
+    </div>
 
   </div>
 </section>

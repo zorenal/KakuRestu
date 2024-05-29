@@ -5,8 +5,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick"
 import Image from "next/image"
 
-export default function Hero({ src, altHeight, mobileHeight, label, carousel }: heroImage) {
-    const heightClass = altHeight ? altHeight : 'h-screen';
+export default function Hero({ src, label, carousel }: heroImage) {
 
     const settings = {
         dots: false,
@@ -19,50 +18,32 @@ export default function Hero({ src, altHeight, mobileHeight, label, carousel }: 
     
     const images = ["/Food1.jpg", "/Food2.jpg"];
     return (
-        <div className={`relative ${heightClass} ${mobileHeight} w-full overflow-y-hidden`}>
-          {carousel ? (
-            <Slider {...settings}>
-              {images.map((img, index) => (
-                <div key={index} className="h-screen w-auto relative">
-                  <Image
-                    src={img}
-                    alt="Hero Image"
-                    fill
-                    objectFit="cover"
-                    className="-z-50"
-                  />
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div
-                      className="text-5xl font-bold text-center text-white overflow-hidden"
-                      style={{ textShadow: "3px 3px 10px rgba(0, 0, 0, 0.5)" }}
-                    >
-                      {label}
+        <Slider {...settings}>
+            {images.map((img, index) => (
+                <div key={index} className="h-screen">
+                    <div className="h-1/2 w-full">
+                        <Image
+                            src={img}
+                            alt="Hero Image"
+                            layout="fill"
+                            objectFit="cover"
+                            className="-z-50"
+                        />
+
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/60"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-transparent to-black/40"></div>
+              
+                        <div className="absolute inset-0 flex items-center justify-center">
+                            <div
+                                className="text-5xl font-bold text-center text-white overflow-hidden"
+                                style={{ textShadow: "3px 3px 10px rgba(0, 0, 0, 0.5)" }}
+                            >
+                                {label}
+                            </div>
+                        </div>
                     </div>
-                  </div>
                 </div>
-              ))}
-            </Slider>
-          ) : (
-            <>
-              <Image
-                src={src}
-                alt="Hero Image"
-                fill
-                objectFit="cover"
-                className="-z-50 "
-              />
-    
-              <div className="absolute inset-0 flex items-center justify-center">
-                <h1
-                  className="text-4xl sm:text-6xl font-bold text-white drop-shadow-xl overflow-hidden"
-                  style={{ textShadow: "3px 3px 5px rgba(0, 0, 0, 0.5)" }}
-                >
-                  {label}
-                </h1>
-              </div>
-            </>
-          )}
-        </div>
-      );
-      
+            ))}
+        </Slider>
+    );
 }

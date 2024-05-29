@@ -37,11 +37,11 @@ export default function Navbar() {
       <Link href="/" className="hidden md:flex sm:mx-10">
         LOGO
       </Link>
-      <ul className="hidden md:flex justify-end sm:mx-10 items-center " >
+      <ul className="hidden sm:flex justify-end sm:mx-10 items-center" >
         {links.map((link, index) => (
-          <li key={index} className="md:mx-5">
+          <li key={index} className="sm:mx-5 py-5">
             {link.label === "RESERVATIONS" ? (
-              <a href={link.href} target="_blank" rel="noopener noreferrer">{link.label}</a>
+              <Link href={link.href} target="_blank" rel="noopener noreferrer" className="border border-black px-4 py-2">{link.label}</Link>
             ) : (
               <Link href={link.href}>{link.label}</Link>
             )}
