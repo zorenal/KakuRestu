@@ -18,11 +18,11 @@ export default function Hero({ src, label, carousel }: heroImage) {
       };
     
  
-    const images = ["/Food1.jpg", "/Food2.jpg"];
+    const images = ["/Hero1.jpg", "/Hero2.jpg","/Hero3.jpg","/Hero4.jpg","/Hero5.jpg"];
     return (
         <Slider {...settings}>
             {images.map((img, index) => (
-                <div key={index} className="relative h-screen bg-cover bg-center">
+                <div key={index} className="h-screen bg-cover bg-center">
                     <div className="absolute inset-0 bg-black bg-opacity-30 flex flex-col items-center justify-center">
                         <Image
                             src={`${carousel ? img : src}`}

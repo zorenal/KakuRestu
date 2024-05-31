@@ -8,7 +8,7 @@ import Image from "next/image";
 export default function LocationsComponent() {
   const locationInfo: locationType = locationData;
   const [selectedLocation, setSelectedLocation] = useState<string | null>(null);
-  const [src, setSrc] = useState<string>("/rstock.jpg");
+  const [src, setSrc] = useState<string>("/Locationhero.jpg");
   const [fade, setFade] = useState<boolean>(false);
 
   const handleLocationClick = (location: string) => {
@@ -19,16 +19,16 @@ export default function LocationsComponent() {
     if (selectedLocation) {
       setFade(true);
       setTimeout(() => {
-        setSrc(locationInfo[selectedLocation]?.image || "/rstock.jpg");
+        setSrc(locationInfo[selectedLocation]?.image || "/Locationhero.jpg");
         setFade(false);
       }, 500);
     } else {
-      setSrc("/rstock.jpg");
+      setSrc("/Locationhero.jpg");
     }
   }, [selectedLocation, locationInfo]);
 
   return (
-    <section className="flex flex-col w-full">
+    <section className="flex flex-col text-center w-full text-white ">
       {/* image */}
       <div
         className={`h-screen relative transition-opacity duration-500 ease-in-out ${
@@ -46,7 +46,7 @@ export default function LocationsComponent() {
       </div>
 
       {/* content */}
-      <h1 className="flex items-center justify-center font-bold text-3xl">
+      <h1 className="text-3xl sm:text-5xl font-bold mb-8 overflow-hidden mt-10">
         Hours and Locations
       </h1>
       <div className=" justify-between items-center h-screen">
@@ -56,8 +56,8 @@ export default function LocationsComponent() {
             {Object.keys(locationInfo).map((loc) => (
               <li key={loc} className="mb-2">
                 <button
-                  className={`p-2 text-white rounded ${
-                    selectedLocation === loc ? "bg-red-500 p-5 " : "bg-blue-500"
+                  className={`p-2 text-black rounded text-xl sm:text-2xl hover:bg-gray-500 transition-all duration-300  ${
+                    selectedLocation === loc ? "bg-gray-500 p-5 " : "bg-white"
                   }`}
                   onClick={() => handleLocationClick(loc)}
                 >
@@ -69,21 +69,21 @@ export default function LocationsComponent() {
         </div>
 
         <div className="w-screen p-4">
-          <div className="text-center">
-            <h2 className="text-2xl font-bold">{selectedLocation}</h2>
-            <p className="mt-2 underline">
+          <div className="text-center ">
+            <h2 className="text-3xl sm:text-4xl  overflow-hidden">{selectedLocation}</h2>
+            <p className="m-5 underline text-xl sm:text-2xl overflow-hidden">
               {selectedLocation ? locationInfo[selectedLocation].address : ""}
             </p>
-            <p className="mt-2 underline">
+            <p className="m-5 underline text-xl sm:text-2xl overflow-hidden">
               {selectedLocation ? locationInfo[selectedLocation].phone : ""}
             </p>
             <ul>
               {selectedLocation ? (
                 Object.entries(locationInfo[selectedLocation].hours).map(
                   ([day, time]) => (
-                    <li key={day}>
-                      <span className="font-bold">{day}</span>:{" "}
-                      <span>{time}</span>
+                    <li key={day} className="m-5">
+                      <span className="font-bold text-xl sm:text-2xl">{day}</span>:{" "}
+                      <span className="text-xl sm:text-2xl">{time}</span>
                     </li>
                   )
                 )
@@ -92,7 +92,7 @@ export default function LocationsComponent() {
               )}
             </ul>
             {selectedLocation && locationInfo[selectedLocation].happyHour ? (
-              <p className="mt-4 font-bold">
+              <p className="mt-4 text-xl sm:text-2xl">
                 Happy Hour: {locationInfo[selectedLocation].happyHour}
               </p>
             ) : (

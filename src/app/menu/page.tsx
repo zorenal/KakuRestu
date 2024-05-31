@@ -4,7 +4,7 @@ import MenuComponent from "../components/Menu"
 export default function Menu() {
     return ( 
     <section>
-        <Hero src='/rstock.jpg' carousel={false}/>
+        <Hero src='/Menu1.jpg' carousel={false}/>
         <MenuComponent />
     </section>
     )

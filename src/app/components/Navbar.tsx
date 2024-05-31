@@ -35,7 +35,7 @@ export default function Navbar() {
   };
 
   return (
-    <nav className={` w-full flex items-center justify-between z-50 text-md sm:text-xl font-bold transition-all duration-300 ${scrolled ? " fixed top-0 left-0 p-5 text-black bg-white " : "absolute top-0 p-8 bg-transparent text-shadow text-white"}`}>
+    <nav className={` w-full flex items-center justify-between z-50 text-md sm:text-xl font-bold transition-all duration-300 text-white ${scrolled ? " fixed top-0 left-0 p-5  bg-black bg-opacity-90 " : "absolute top-0 p-8 bg-transparent text-shadow"}`}>
       {/* Larger Screens */}
 <div className="hidden md:flex justify-between items-center w-full">
   <Link href="/" className="sm:mx-10">

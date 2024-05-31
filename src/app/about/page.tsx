@@ -5,7 +5,7 @@ import Gallery from "../components/Gallery"
 export default function About() {
     return (
         <section>
-            <Hero src='/rstock.jpg'/>
+            <Hero src='/About1.jpg'/>
             <AboutComponent/>
             <Gallery/>
         </section>

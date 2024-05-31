@@ -9,7 +9,7 @@
         "Sunday": "9am - 8pm"
       },
       "happyHour": "Monday - Friday 3pm - 6pm",
-      "image": "/out1.jpg"
+      "image": "/Location1.jpg"
     },
     "Los Angeles": {
       "address": "1234 Hollywood Blvd, Los Angeles, CA 90028",
@@ -21,7 +21,7 @@
         "Sunday": "9am - 8pm"
       },
       "happyHour": "Monday - Friday 4pm - 7pm",
-      "image": "/out2.jpg"
+      "image": "/Location2.jpg"
     },
     "San Francisco": {
       "address": "5678 Market St, San Francisco, CA 94102",
@@ -33,7 +33,7 @@
         "Sunday": "9am - 8pm"
       },
       "happyHour": "Monday - Friday 3pm - 6pm",
-      "image": "/out3.jpg"
+      "image": "/Location3.jpg"
     }
   }
   
