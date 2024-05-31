@@ -41,7 +41,6 @@ export default function LocationsComponent() {
           src={src}
           alt={`${selectedLocation || "default"} image`}
           fill
-          sizes="(max-width:768px): 100vw, 700px"
           priority={true}
           objectFit="cover"
         />
@@ -54,24 +53,25 @@ export default function LocationsComponent() {
       <div className=" justify-between items-center h-screen">
         {/* buttons */}
         <div className="mt-4 w-screen ">
-          <ul className="flex flex-col items-center">
+          <div className="flex justify-center items-center">
             {Object.keys(locationInfo).map((loc) => (
-              <li key={loc} className="mb-2">
+          
                 <button
-                  className={`p-2 text-black rounded text-xl sm:text-2xl hover:bg-gray-500 transition-all duration-300  ${
+                key={loc}
+                  className={` mb-2 mx-1 sm:mx-5 p-2 text-black rounded text-xl sm:text-2xl hover:bg-gray-500 transition-all duration-300  ${
                     selectedLocation === loc ? "bg-gray-500 p-5 " : "bg-white"
                   }`}
                   onClick={() => handleLocationClick(loc)}
                 >
                   {loc}
                 </button>
-              </li>
+            
             ))}
-          </ul>
+          </div>
         </div>
 
-        <div className="w-screen p-4">
-          <div className="text-center ">
+        <div className="flex justify-center w-screen p-4">
+          <div className={`text-center  ${selectedLocation ? "border-black p-10 border-2" : "border-0"}`}>
             <h2 className="text-3xl sm:text-4xl  overflow-hidden">{selectedLocation}</h2>
             <p className="m-5 underline text-xl sm:text-2xl overflow-hidden">
               {selectedLocation ? locationInfo[selectedLocation].address : ""}

@@ -13,20 +13,20 @@ export default function MenuComponent() {
         <h1 className="text-3xl sm:text-5xl font-bold mb-8 overflow-hidden mt-10">Menu</h1>
   
         <div className="max-w-3xl w-full overflow-hidden">
-          <div className="flex flex-wrap justify-evenly mb-4">
+          <div className="flex justify-center items-center">
             {Object.keys(menuItem).map((category) => (
               <button
                 key={category}
                 onClick={() => setSelectedMenu(category)}
-                className={`text-xl sm:text-2xl  menu-btn px-3 sm:px-4 py-2 border rounded-lg text-black hover:bg-gray-500 transition-all duration-300 ${
-                  selectedMenu === category ? "bg-gray-500" : "bg-white"
+                className={`mb-2 mx-1 sm:mx-5 p-2 text-black rounded text-xl sm:text-2xl hover:bg-gray-500 transition-all duration-300 ${
+                  selectedMenu === category ? "bg-gray-500 p-5" : "bg-white"
                 }`}
               >
                 {category.charAt(0).toUpperCase() + category.slice(1)}
               </button>
             ))}
           </div>
-          <div className="overflow-y-auto h-3/4">
+          <div className="overflow-y-auto h-3/4 border-black p-10 border-2">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-0 gap-x-0 p-4">
               {Object.keys(menuItem[selectedMenu]).map((subcategory) => (
                 <div key={subcategory} className="mb-6">
