@@ -6,7 +6,6 @@ export default function Location(){
 return (
  <section>
     <LocationsComponent/>
-    <Footer/>
  </section>
     )
 }

@@ -6,7 +6,6 @@ export default function Menu() {
     <section>
         <Hero src='/rstock.jpg' carousel={false}/>
         <MenuComponent />
-        <Footer/>
     </section>
     )
 }
