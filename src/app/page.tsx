@@ -6,7 +6,7 @@ export default function Main() {
   return (
     <section>
        
-      <Hero label="Placeholder" carousel={true}/>
+      <Hero label="Placeholder" label={"テストウェブサイト"} carousel={true}/>
 
       <section className="h-1/2 flex">
         <div className="w-1/2 flex items-center justify-center">
