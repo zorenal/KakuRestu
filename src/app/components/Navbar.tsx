@@ -17,7 +17,7 @@ export default function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 100) {
+      if (window.scrollY > 0) {
         setScrolled(true);
       } else {
         setScrolled(false);
@@ -35,27 +35,41 @@ export default function Navbar() {
   };
 
   return (
-    <nav className={`fixed top-0 left-0 w-full flex items-center justify-between z-50 text-xl font-bold transition-all duration-300 ${scrolled ? "p-5 text-black bg-white " : "p-10 bg-transparent text-shadow text-white"}`}>
+    <nav className={` w-full flex items-center justify-between z-50 text-md sm:text-xl font-bold transition-all duration-300 ${scrolled ? " fixed top-0 left-0 p-5 text-black bg-white " : "absolute top-0 p-8 bg-transparent text-shadow text-white"}`}>
       {/* Larger Screens */}
-      <Link href="/" className="hidden md:flex sm:mx-10">
-        LOGO
-      </Link>
-      <ul className="hidden sm:flex justify-end sm:mx-10 items-center">
-        {links.map((link, index) => (
-          <li key={index} className="sm:mx-5 py-5">
-            {link.label === "RESERVATIONS" ? (
-              <Link href={link.href} target="_blank" rel="noopener noreferrer" className="border border-black px-4 py-2 hover:bg-yellow-500 hover:text-white hover:transition-all hover:duration-300 ">{link.label}</Link>
-            ) : (
-              <Link href={link.href} className="hover:text-gray-300 hover:transition-all hover:duration-300">{link.label}</Link>
-            )}
-          </li>
-        ))}
-      </ul>
+<div className="hidden md:flex justify-between items-center w-full">
+  <Link href="/" className="sm:mx-10">
+    PLACEHOLDER
+  </Link>
+  <ul className="hidden sm:flex ml-4">
+    {links.map((link, index) => (
+      <li key={index} className="sm:mx-5 py-5">
+        {link.label === "RESERVATIONS" ? (
+          <Link
+            href={link.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="border border-black px-4 py-2 hover:bg-yellow-500 hover:text-white hover:transition-all hover:duration-300"
+          >
+            {link.label}
+          </Link>
+        ) : (
+          <Link
+            href={link.href}
+            className="hover:text-gray-300 hover:transition-all hover:duration-300"
+          >
+            {link.label}
+          </Link>
+        )}
+      </li>
+    ))}
+  </ul>
+</div>
 
       {/* Mobile Devices */}
-      <div className="md:hidden lg:hidden w-screen">
+      <div className="md:hidden w-screen">
         <div className="flex justify-between items-center overflow-hidden">
-          <Link href="/">Placeholder</Link>
+          <Link href="/">PLACEHOLDER</Link>
           <Hamburger toggled={isOpen} toggle={setOpen} rounded />
         </div>
 
