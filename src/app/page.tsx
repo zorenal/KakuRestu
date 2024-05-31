@@ -10,7 +10,7 @@ export default function Main() {
 
       <section className="h-1/2 flex">
         <div className="w-1/2 flex items-center justify-center">
-            <Link href="https://www.opentable.com/" className="bg-white rounded-lg p-8 text-xl sm:text-2xl hover:bg-gray-500 transition-all duration-300">
+            <Link href="https://www.opentable.com/" className="bg-white rounded-lg p-3 sm:p-8 gi text-xl sm:text-2xl hover:bg-gray-500 transition-all duration-300">
               Reservations
             </Link>
           </div>
@@ -37,14 +37,14 @@ export default function Main() {
           />
         </div>
         <div className="w-1/2 flex items-center justify-center">
-          <Link href="/menu" className="bg-white rounded-lg p-8 text-xl sm:text-2xl hover:bg-gray-500 transition-all duration-300">
+          <Link href="/menu" className="bg-white rounded-lg p-3 sm:p-8  text-xl sm:text-2xl hover:bg-gray-500 transition-all duration-300">
             Menu
           </Link>
         </div>
       </section>
       <section className="h-1/2 flex">
         <div className="w-1/2 flex items-center justify-center">
-          <Link href="/location" className="bg-white rounded-lg p-8 text-xl sm:text-2xl hover:bg-gray-500 transition-all duration-300">
+          <Link href="/location" className="bg-white rounded-lg p-3 sm:p-8 text-xl sm:text-2xl hover:bg-gray-500 transition-all duration-300">
             Hours & Locations
           </Link>
         </div>

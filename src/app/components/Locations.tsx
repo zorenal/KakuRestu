@@ -41,6 +41,7 @@ export default function LocationsComponent() {
           src={src}
           alt={`${selectedLocation || "default"} image`}
           fill
+          sizes="(max-width:768px): 100vw, 700px"
           objectFit="cover"
         />
       </div>
