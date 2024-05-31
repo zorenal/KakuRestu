@@ -49,7 +49,7 @@ export default function Navbar() {
             href={link.href}
             target="_blank"
             rel="noopener noreferrer"
-            className="border border-black px-4 py-2 hover:bg-yellow-500 hover:text-white hover:transition-all hover:duration-300"
+            className="border border-white px-4 py-2 pt-4 hover:bg-yellow-500 hover:text-white hover:transition-all hover:duration-300"
           >
             {link.label}
           </Link>
@@ -82,7 +82,7 @@ export default function Navbar() {
             <li key={index} className="p-4 text-l">
               {link.label === "RESERVATIONS" ? (
                 <Link href={link.href} target="_blank" rel="noopener noreferrer" onClick={handleMenu}
-                className="border border-black p-2">
+                className="border border-white p-4">
                   {link.label}
                 </Link>
               ) : (
