@@ -36,7 +36,7 @@ export default function Hero({ src, label, carousel }: heroImage) {
               
                         <div className="absolute inset-0 flex items-center justify-center">
                             <div
-                                className="text-5xl font-bold text-center text-white overflow-hidden"
+                                className="text-3xl sm:text-5xl font-bold text-center text-white overflow-hidden"
                                 style={{ textShadow: "3px 3px 10px rgba(0, 0, 0, 0.5)" }}
                             >
                            {label}
