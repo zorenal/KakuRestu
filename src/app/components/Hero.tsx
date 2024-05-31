@@ -28,6 +28,7 @@ export default function Hero({ src, label, carousel }: heroImage) {
                             src={`${carousel ? img : src}`}
                             alt="Hero Image"
                             layout="fill"
+                            priority={true}
                             sizes="(max-width:768px): 100vw, 700px"
                             objectFit="cover"
                             className="-z-50"
