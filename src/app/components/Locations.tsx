@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import locationData from "@/../utils/locations.json";
 import { locationType } from "../../../utils/types";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function LocationsComponent() {
   const locationInfo: locationType = locationData;
@@ -55,9 +56,8 @@ export default function LocationsComponent() {
         <div className="mt-4 w-screen ">
           <div className="flex justify-center items-center">
             {Object.keys(locationInfo).map((loc) => (
-          
                 <button
-                key={loc}
+                  key={loc}
                   className={` mb-2 mx-1 sm:mx-5 p-2 text-black rounded text-xl sm:text-2xl hover:bg-gray-500 transition-all duration-300  ${
                     selectedLocation === loc ? "bg-gray-500 p-5 " : "bg-white"
                   }`}
@@ -65,7 +65,6 @@ export default function LocationsComponent() {
                 >
                   {loc}
                 </button>
-            
             ))}
           </div>
         </div>
@@ -74,10 +73,26 @@ export default function LocationsComponent() {
           <div className={`text-center  ${selectedLocation ? "border-black p-10 border-2" : "border-0"}`}>
             <h2 className="text-3xl sm:text-4xl  overflow-hidden">{selectedLocation}</h2>
             <p className="m-5 underline text-xl sm:text-2xl overflow-hidden">
-              {selectedLocation ? locationInfo[selectedLocation].address : ""}
+              {selectedLocation ? (
+                <Link
+                  href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(locationInfo[selectedLocation].address)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {locationInfo[selectedLocation].address}
+                </Link>
+              ) : (
+                ""
+              )}
             </p>
             <p className="m-5 underline text-xl sm:text-2xl overflow-hidden">
-              {selectedLocation ? locationInfo[selectedLocation].phone : ""}
+              {selectedLocation ? (
+                <Link href={`tel:${locationInfo[selectedLocation].phone}`}>
+                  {locationInfo[selectedLocation].phone}
+                </Link>
+              ) : (
+                ""
+              )}
             </p>
             <ul>
               {selectedLocation ? (
