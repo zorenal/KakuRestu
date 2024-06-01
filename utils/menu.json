@@ -168,6 +168,11 @@
                 "name": "Wasabi Bloody Mary",
                 "price": 13,
                 "ingredients": "Vodka, Tomato juice, Wasabi, Lemon juice, Celery stick"
+            },
+            {
+                "name": "Yuzu Sake Martini",
+                "price": 15,
+                "ingredients": "Sake, Yuzu juice, Vodka, Simple syrup, Lemon twist"
             }
         ],
         "Beverages": [

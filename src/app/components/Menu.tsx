@@ -31,7 +31,7 @@ export default function MenuComponent() {
             </button>
           ))}
         </div>
-        <div className="overflow-y-auto h-3/4 border-black p-10 border-2">
+        <div className="overflow-y-auto h-3/4 border-black p-10 border-2 mt-4">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-0 gap-x-0 p-4">
             {Object.keys(menuItem[selectedMenu]).map((subcategory) => (
               <div key={subcategory} className="mb-6">
