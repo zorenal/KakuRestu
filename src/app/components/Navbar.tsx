@@ -39,7 +39,7 @@ export default function Navbar() {
       {/* Larger Screens */}
 <div className="hidden md:flex justify-between items-center w-full">
   <Link href="/" className="sm:mx-10">
-    Pテストウェブサイト
+  かくうのレストラン
   </Link>
   <ul className="hidden sm:flex ml-4">
     {links.map((link, index) => (
@@ -69,7 +69,7 @@ export default function Navbar() {
       {/* Mobile Devices */}
       <div className="md:hidden w-screen">
         <div className="flex justify-between items-center overflow-hidden">
-          <Link href="/">テストウェブサイト</Link>
+          <Link href="/">かくうのレストラン</Link>
           <Hamburger toggled={isOpen} toggle={setOpen} rounded />
         </div>
 
