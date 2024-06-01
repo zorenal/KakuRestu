@@ -41,7 +41,7 @@ export default function MenuComponent() {
                       >
                         <div className="md:ml-4">
                           <h3 className="text-xl sm:text-2xl  font-semibold mb-2 ">
-                            {menuItem.name} ~ ${menuItem.price}
+                            {menuItem.name} {menuItem.price}
                           </h3>
                           <p className="text-l sm:text-xl text-gray-500">{menuItem.ingredients}</p>
                         </div>

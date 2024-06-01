@@ -51,7 +51,7 @@ export default function LocationsComponent() {
       <h1 className="text-3xl sm:text-5xl font-bold mb-8 overflow-hidden mt-10">
         Hours and Locations
       </h1>
-      <div className=" justify-between items-center h-full sm:min-h-screen">
+      <div className=" justify-between items-center min-h-screen">
         {/* buttons */}
         <div className="mt-4 w-screen ">
           <div className="flex justify-center items-center">
