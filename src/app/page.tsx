@@ -1,14 +1,14 @@
 import Hero from "./components/Hero";
 import Link from "next/link";
 import Image from "next/image";
-
+import Footer from "./components/Footer";
 export default function Main() {
   return (
     <section>
        
       <Hero label="テストウェブサイト" carousel={true}/>
-<section className="h-screen overflow-hidden">
-      <section className="flex h-1/2">
+
+      <section className="flex">
         <div className="w-1/2 flex items-center justify-center">
             <Link href="https://www.opentable.com/" className="bg-white rounded-lg p-3 sm:p-8 gi text-xl sm:text-2xl hover:bg-gray-500 transition-all duration-300">
               Reservations
@@ -25,7 +25,7 @@ export default function Main() {
             />
           </div>
       </section>
-      <section className="flex h-1/2">
+      <section className="flex">
       <div className="w-1/2">
           <Image
             src="/Menu1.jpg"
@@ -42,7 +42,7 @@ export default function Main() {
           </Link>
         </div>
       </section>
-      <section className="flex  h-1/2">
+      <section className="flex">
         <div className="w-1/2 flex items-center justify-center">
           <Link href="/location" className="bg-white rounded-lg p-3 sm:p-8 text-xl sm:text-2xl hover:bg-gray-500 transition-all duration-300">
             Hours & Locations
@@ -59,8 +59,7 @@ export default function Main() {
           />
         </div>
       </section>
-    </section>
-
+   
     </section>
   );
 }
