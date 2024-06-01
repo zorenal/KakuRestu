@@ -41,7 +41,7 @@ export default function MenuComponent() {
                 {menuItem[selectedMenu][subcategory].map((menuItem) => (
                   <div
                     key={menuItem.name}
-                    className="p-3 flex flex-col md:flex-row items-start md:items-center mb-2 border-b "
+                    className="p-3 flex flex-col md:flex-row items-start md:items-center mb-2  "
                   >
                     <div className="md:ml-4">
                       <h3 className="text-xl sm:text-2xl font-semibold mb-2 flex justify-between">
