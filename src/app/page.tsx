@@ -1,12 +1,12 @@
 import Hero from "./components/Hero";
 import Link from "next/link";
 import Image from "next/image";
-import Footer from "./components/Footer";
+
 export default function Main() {
   return (
     <section>
        
-      <Hero label="かくうのレストラン)" carousel={true}/>
+      <Hero label="かくうのレストラン" carousel={true}/>
 
       <section className="flex">
         <div className="w-1/2 flex items-center justify-center">
