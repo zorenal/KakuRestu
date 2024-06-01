@@ -87,7 +87,7 @@ export default function LocationsComponent() {
             </p>
             <p className="m-5 underline text-xl sm:text-2xl overflow-hidden">
               {selectedLocation ? (
-                <Link href={`tel:${locationInfo[selectedLocation].phone}`}>
+                <Link href={`${locationInfo[selectedLocation].phone}`}>
                   {locationInfo[selectedLocation].phone}
                 </Link>
               ) : (
