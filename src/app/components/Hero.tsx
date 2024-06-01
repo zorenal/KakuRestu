@@ -5,7 +5,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick"
 import Image from "next/image"
 
-export default function Hero({ src, label, carousel }: heroImage) {
+export default function Hero({ src, label, label2, carousel }: heroImage) {
 
     const settings = {
         dots: false,
@@ -39,6 +39,8 @@ export default function Hero({ src, label, carousel }: heroImage) {
                                 style={{ textShadow: "3px 3px 10px rgba(0, 0, 0, 0.5)" }}
                             >
                            {label}
+                           <hr className="m-2"/>
+                           {label2}
                             </div>
                         </div>
                     </div>

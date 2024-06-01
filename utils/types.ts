@@ -8,6 +8,7 @@ export type navLinks = {
 export type heroImage = {
   src?: string;
   label?: string;
+  label2?: string,
   altHeight?: boolean;
   carousel?: boolean;
 };
