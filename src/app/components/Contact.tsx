@@ -3,24 +3,16 @@ import { FormData } from "../../../utils/types";
 import { useForm, SubmitHandler } from 'react-hook-form';
 
 export default function Contact() {
-    const { register, handleSubmit } = useForm<FormData>({
-        defaultValues: {
-            name: '',
-            email: '',
-            message: ''
-        },
-    });
+    const { register, handleSubmit, reset } = useForm<FormData>();
 
     async function submitForm(data: any) {
-      const json = JSON.stringify(data);
-  
       const response = await fetch("/api/contact", {
           method: "POST",
           headers: {
               "Content-Type": "application/json",
               "Accept": "application/json"
           },
-          body: json
+          body: JSON.stringify(data)
       });
   
       const result = await response.json();
@@ -32,13 +24,12 @@ export default function Contact() {
       }
   }
   
-    
-    
-    const onSubmit: SubmitHandler<FormData> = async (data: FormData) => {
+    const submit: SubmitHandler<FormData> = async (data: FormData) => {
         try {
           console.log(data)
             await submitForm(data);
             alert('Form submitted successfully!');
+            reset()
         } catch (error) {
             console.error('Error submitting form:', error);
             alert('Failed to submit the form.');
@@ -52,7 +43,7 @@ export default function Contact() {
             <div className="mb-2">For job opportunities, please send your resume to zalabrador@gmail.com</div>
             <div>For all other inquiries, send us a message via the form below and we’ll get back to you as soon as possible.</div>
 
-            <form onSubmit={handleSubmit(onSubmit)} className='mt-5 w-full md:w-1/2'>
+            <form onSubmit={handleSubmit(submit)} className='mt-5 w-full md:w-1/2'>
                 <div className='mb-5'>
                     <label
                         htmlFor='name'
