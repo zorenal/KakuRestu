@@ -33,6 +33,7 @@ export type locationType = {
     hours: { [day: string]: string }; 
     happyHour?: string;
     image?: string;
+    map?: string
   };
 };
 

@@ -51,7 +51,7 @@ export default function LocationsComponent() {
       <h1 className="text-3xl sm:text-5xl font-bold mb-8 overflow-hidden mt-10">
         Hours and Locations
       </h1>
-      <div className=" justify-between items-center h-screen">
+      <div className=" justify-between items-center h-full">
         {/* buttons */}
         <div className="mt-4 w-screen ">
           <div className="flex justify-center items-center">
@@ -115,9 +115,23 @@ export default function LocationsComponent() {
             ) : (
               <></>
             )}
+            <div className="hidden sm:flex w-full justify-center items-center mt-5">
+        {selectedLocation && locationInfo[selectedLocation].map ? (
+              <iframe src={`${locationInfo[selectedLocation].map}`} width="800" height="400" loading="lazy"/>
+            ) : (
+              <></>
+            )}
+        </div>
           </div>
         </div>
       </div>
+      <div className="flex w-screen justify-center items-center mb-5 sm:hidden">
+        {selectedLocation && locationInfo[selectedLocation].map ? (
+              <iframe src={`${locationInfo[selectedLocation].map}`} width="800" height="400" loading="lazy"/>
+            ) : (
+              <></>
+            )}
+        </div>
     </section>
   );
 }
