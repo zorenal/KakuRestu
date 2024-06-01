@@ -9,7 +9,7 @@ export default function Main() {
       <Hero label="かくうのレストラン" label2="Kakū Restu" carousel={true}/>
 
       <section className="flex flex-col sm:flex-row">
-           <div className="sm:w-1/2 flex items-center justify-center h-80 sm:h-auto">
+           <div className="sm:w-1/2 flex items-center justify-center h-56 sm:h-auto">
           <Link href="/location" className="bg-white rounded-lg p-3 sm:p-8 text-2xl sm:text-3xl hover:bg-gray-500 transition-all duration-300">
             Hours & Locations
           </Link>
@@ -27,7 +27,7 @@ export default function Main() {
       </section>
 
       <section className="flex flex-col sm:flex-row">
-      <div className="sm:hidden sm:w-1/2 flex items-center justify-center h-80 ">
+      <div className="sm:hidden sm:w-1/2 flex items-center justify-center h-56 ">
           <Link href="/menu" className="bg-white rounded-lg p-3 sm:p-8  text-2xl sm:text-3xl hover:bg-gray-500 transition-all duration-300">
             Menu
           </Link>
@@ -50,7 +50,7 @@ export default function Main() {
       </section>
 
       <section className="flex flex-col sm:flex-row">
-        <div className="sm:w-1/2 flex items-center justify-center h-80 sm:h-auto">
+        <div className="sm:w-1/2 flex items-center justify-center h-56 sm:h-auto">
           <Link href="/location" className="bg-white rounded-lg p-3 sm:p-8 text-2xl sm:text-3xl hover:bg-gray-500 transition-all duration-300">
             Hours & Locations
           </Link>
