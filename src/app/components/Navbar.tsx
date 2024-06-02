@@ -39,7 +39,7 @@ export default function Navbar() {
       {/* Larger Screens */}
 <div className="hidden md:flex justify-between items-center w-full">
   <Link href="/" className="sm:mx-10">
-  かくうのレストラン
+  偽のレストラン
   </Link>
   <ul className="hidden sm:flex ml-4">
     {links.map((link, index) => (
