@@ -69,7 +69,7 @@ export default function Navbar() {
       {/* Mobile Devices */}
       <div className="md:hidden w-screen">
         <div className="flex justify-between items-center overflow-hidden">
-          <Link href="/">かくうのレストラン</Link>
+          <Link href="/">偽のレストラン</Link>
           <Hamburger toggled={isOpen} toggle={setOpen} rounded />
         </div>
 
