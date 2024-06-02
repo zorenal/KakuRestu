@@ -6,7 +6,7 @@ export default function Main() {
   return (
     <section>
        
-      <Hero label="かくうのレストラン" label2="Kakū Restu" carousel={true}/>
+      <Hero label="偽のレストラン" label2="Nise Japanese Cuisine" carousel={true}/>
 
       <section className="flex flex-col sm:flex-row">
            <div className="sm:w-1/2 flex items-center justify-center h-56 sm:h-auto">
