@@ -7,7 +7,7 @@ import { useState, useEffect } from "react";
 export default function Navbar() {
   const links: navLinks[] = [
     { href: "/menu", label: "MENU" },
-    { href: "/location", label: "HOURS & LOCATION" },
+    { href: "/location", label: "LOCATIONS" },
     { href: "/about", label: "ABOUT" },
     { href: "https://www.opentable.com/", label: "RESERVATIONS" },
   ];
