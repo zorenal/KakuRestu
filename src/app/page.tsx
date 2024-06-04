@@ -10,8 +10,8 @@ export default function Main() {
 
       <section className="flex flex-col sm:flex-row">
            <div className="sm:w-1/2 flex items-center justify-center h-56 sm:h-auto">
-          <Link href="/location" className="bg-white rounded-lg p-3 sm:p-8 text-2xl sm:text-3xl hover:bg-gray-500 transition-all duration-300">
-            Hours & Locations
+          <Link href="https://www.opentable.com/" className="bg-white rounded-lg p-3 sm:p-8 text-2xl sm:text-3xl hover:bg-gray-500 transition-all duration-300">
+         Reservations
           </Link>
         </div>
         <div className="sm:w-1/2">
