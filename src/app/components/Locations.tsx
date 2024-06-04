@@ -69,7 +69,7 @@ export default function LocationsComponent() {
           </div>
         </div>
 
-        <div className="flex justify-center w-screen p-4">
+        <div className="flex justify-center w-screen p-4 ">
           <div className={`text-center  ${selectedLocation ? "border-black p-10 border-2" : "border-0"}`}>
             <h2 className="text-3xl sm:text-4xl  overflow-hidden">{selectedLocation}</h2>
             <p className="m-5 underline text-xl sm:text-2xl overflow-hidden">
